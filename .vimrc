@@ -83,8 +83,6 @@ if has("autocmd")
 
 else
 
-  set autoindent		" always set autoindenting on
-
 endif " has("autocmd")
 
 " Convenient command to see the difference between the current buffer and the
@@ -101,6 +99,11 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
+
+
+" Get smarter about indenting.
+set autoindent
+set smartindent
 
 set nocompatible
 
