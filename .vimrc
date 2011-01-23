@@ -1,35 +1,126 @@
-" An example for a vimrc file.
+" 
+" .vimrc
 "
-" Maintainer:  Bram Moolenaar <Bram@vim.org>
-" Last change:  2008 Dec 17
+" Steven Merrill (@stevenmerrill)
 "
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"        for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"      for OpenVMS:  sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" This apparently must be first. Bye, vi-compatibility!
 set nocompatible
 
-" allow backspacing over everything in insert mode
+" Autoload with Pathogen.
+filetype off
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+
+" Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup    " do not keep a backup file, use versions instead
+" Get smarter about indenting.
+set autoindent
+set smartindent
+
+" Show commands in flight
+set showcmd   
+
+" Give some context while scrolling.
+set scrolloff=3
+
+" Don't you beep at me.
+set visualbell
+
+" Fix an apparent security vulnerability
+set modelines=0
+
+" 2 spaces, not tabs.
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+" Set up a much nicer leader.
+let mapleader = ","
+
+" Make wildcard completions work more like a shell.
+set wildmenu
+set wildmode=list:longest
+
+" Shortcut to rapidly toggle `set list`
+" Default it to on
+set list
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+" Tame searching and moving, a la Steve Losh.
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Arrow keys are for wusses.
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Fun with visual displays.
+set ruler
+
+" Bah. Relative line numbers are for vim 7.3+ only, and Ubuntu's behind.
+if v:version > 702
+  set relativenumber
 else
-  set backup    " keep a backup file
+  set number
 endif
-set history=50    " keep 50 lines of command line history
-set ruler    " show the cursor position all the time
-set showcmd    " display incomplete commands
-set incsearch    " do incremental searching
+
+" Set up vim for optimal use with PHP.
+au BufNewFile,BufRead *.engine set filetype=php
+au BufNewFile,BufRead *.theme set filetype=php
+au BufNewFile,BufRead *.module set filetype=php
+au BufNewFile,BufRead *.test set filetype=php
+au BufNewFile,BufRead *.install set filetype=php
+au BufNewFile,BufRead *.inc set filetype=php
+
+let php_folding=1
+
+" Good completion.
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType inc set omnifunc=phpcomplete#CompletePHP
+
+" Lots of history / undo.
+set history=1000    
+set undolevels=1000
+
+" Set the terminal title
+set title
+
+" Remove a couple presses of Shift from the normal vim workflow.
+nnoremap ; :
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" The default .vimrc follows.
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -92,85 +183,4 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
       \ | wincmd p | diffthis
 endif
-
-" My customizations.
-
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
-
-
-" Get smarter about indenting.
-set autoindent
-set smartindent
-
-set nocompatible
-
-set modelines=0
-
-" 2 spaces, not tabs.
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
-" Shortcut to rapidly toggle `set list`
-" Default it to on
-set list
-nmap <leader>l :set list!<CR>
-
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-
-" Tame searching and moving, a la Steve Losh.
-nnoremap / /\v
-vnoremap / /\v
-set ignorecase
-set smartcase
-set gdefault
-set incsearch
-set showmatch
-set hlsearch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
-
-" Arrow keys are for wusses.
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-" Fun with visual displays.
-set ruler
-
-" Bah. Relative line numbers are for vim 7.3+ only, and Ubuntu's behind.
-if v:version > 702
-  set relativenumber
-else
-  set number
-endif
-
-" Set up vim for optimal use with PHP.
-au BufNewFile,BufRead *.engine set filetype=php
-au BufNewFile,BufRead *.theme set filetype=php
-au BufNewFile,BufRead *.module set filetype=php
-au BufNewFile,BufRead *.test set filetype=php
-au BufNewFile,BufRead *.install set filetype=php
-au BufNewFile,BufRead *.inc set filetype=php
-
-let php_folding=1
-
-" Good completion.
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType inc set omnifunc=phpcomplete#CompletePHP
 
