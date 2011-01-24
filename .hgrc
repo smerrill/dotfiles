@@ -1,6 +1,7 @@
 [ui]
 username = Steven Merrill <steven.merrill@gmail.com>
 merge = diffmerge
+extdiff = diffmerge
 
 [extensions]
 hgext.fetch=

@@ -104,6 +104,12 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType inc set omnifunc=phpcomplete#CompletePHP
 
+" Set vim up for optimal use with Scala.
+hi scalaNew gui=underline
+hi scalaMethodCall gui=italic
+hi scalaValName gui=underline
+hi scalaVarName gui=underline
+
 " Lots of history / undo.
 set history=1000    
 set undolevels=1000
