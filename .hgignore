@@ -4,4 +4,4 @@ syntax:regexp
 .vim/.netr
 .git
 ~$
-.0$
+.o$
