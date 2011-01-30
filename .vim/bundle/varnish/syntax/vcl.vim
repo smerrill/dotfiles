@@ -53,7 +53,7 @@ syn match  vclNumber   display contained "\d\+"
 syn match  vclNumberTime   display contained "\d\+[dhsm]"
 
 " client
-syn match  vclOption   /client\.ip/
+syn match  vclOption   /client\.\(ip\|identity\)/
 " server
 syn match  vclOption   /server\.\(ip\|port\)/
 " req
