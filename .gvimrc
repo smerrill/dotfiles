@@ -2,7 +2,7 @@
 if has("mac")
   set guifont=Menlo:h11
 elseif has("gui_gtk2")
-  set guifont=Liberation\ Mono\ 11
+  set guifont=Mensch\ 10
 endif
 
 "if has("linux")
