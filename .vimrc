@@ -83,12 +83,8 @@ vnoremap <right> <nop>
 " Fun with visual displays.
 set ruler
 
-" Bah. Relative line numbers are for vim 7.3+ only, and Ubuntu's behind.
-if v:version > 702
-  set relativenumber
-else
-  set number
-endif
+" Relativenumber is damn heavy.
+set number
 
 " Set up vim for optimal use with PHP.
 au BufNewFile,BufRead *.engine set filetype=php
