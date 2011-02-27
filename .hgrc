@@ -8,7 +8,9 @@ hgext.fetch=
 hgext.convert=
 hgext.mq=
 hgext.extdiff=
-hgext.purge= 
+hgext.purge=
+hgshelve=~/.mercurial/hgshelve.py
+
 
 [extdiff]
 cmd.diffmerge = /usr/bin/diffmerge

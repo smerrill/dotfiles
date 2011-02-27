@@ -94,7 +94,7 @@ au BufNewFile,BufRead *.test set filetype=php
 au BufNewFile,BufRead *.install set filetype=php
 au BufNewFile,BufRead *.inc set filetype=php
 
-let php_folding=1
+let g:DisableAutoPHPFolding = 1
 
 " Good completion.
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
