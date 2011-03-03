@@ -11,9 +11,9 @@ hgext.extdiff=
 hgext.purge=
 hgshelve=~/.mercurial/hgshelve.py
 
-
 [extdiff]
 cmd.diffmerge = /usr/bin/diffmerge
+mvimdiff = /usr/local/bin/mvimdiff -df
 
 [merge-tools]
 diffmerge.executable = /usr/bin/diffmerge
