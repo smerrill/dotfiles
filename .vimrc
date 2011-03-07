@@ -83,7 +83,6 @@ vnoremap <right> <nop>
 " Fun with visual displays.
 set ruler
 
-" Relativenumber is damn heavy.
 set number
 
 " Set up vim for optimal use with PHP.
