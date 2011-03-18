@@ -4,6 +4,8 @@ merge = diffmerge
 extdiff = diffmerge
 
 [extensions]
+hgext.bookmarks =
+hggit = 
 hgext.fetch=
 hgext.convert=
 hgext.mq=
