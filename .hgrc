@@ -3,6 +3,7 @@ username = Steven Merrill <steven.merrill@gmail.com>
 merge = diffmerge
 extdiff = diffmerge
 
+# Run 'easy_install hg-git' if this errors out.
 [extensions]
 hgext.bookmarks =
 hggit = 
