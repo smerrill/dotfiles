@@ -1,7 +1,9 @@
+# Enable bash_completion from brew.
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# Put homebrew PHP first in path a la http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/
 export PATH="$(brew --prefix)/bin:$PATH"
 
 # Terminal coloring
