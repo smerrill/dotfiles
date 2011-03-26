@@ -4,7 +4,7 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # Put homebrew PHP first in path a la http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/
-export PATH="$(brew --prefix)/bin:$PATH"
+export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
 
 # Terminal coloring
 export CLICOLOR=1

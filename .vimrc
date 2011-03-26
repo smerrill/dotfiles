@@ -14,7 +14,7 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
 " Set color scheme
-colorscheme mustang
+colorscheme vilight2
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
