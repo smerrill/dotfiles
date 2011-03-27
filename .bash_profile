@@ -22,3 +22,6 @@ export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.3-45758/jars"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-62308/jars"
 
+# If we are in an interactive session, source bashrc.
+[[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
+

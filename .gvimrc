@@ -14,3 +14,6 @@ set guioptions-=T
 " Save on losing focus
 " au FocusLost * :wa
 
+" Set colors again for vim's benefit (?)
+colorscheme vilight2
+
