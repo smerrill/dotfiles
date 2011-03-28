@@ -13,8 +13,15 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
-" Set color scheme
-colorscheme vilight2
+if !has("gui_running")
+  " Oh, OS X.
+  set t_Co=256
+  colorscheme mustang
+else
+  " Set color scheme
+  colorscheme vilight2
+endif
+
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start

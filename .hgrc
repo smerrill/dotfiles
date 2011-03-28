@@ -13,6 +13,7 @@ hgext.mq=
 hgext.extdiff=
 hgext.purge=
 hgshelve=~/.mercurial/hgshelve.py
+prompt=~/.mercurial/prompt.py
 
 [extdiff]
 cmd.diffmerge = /usr/bin/diffmerge
