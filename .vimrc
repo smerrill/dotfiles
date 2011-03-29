@@ -96,7 +96,8 @@ set number
 
 " Sidebar plugin options
 let NERDTreeShowHidden=1
-let Tlist_Use_Right_Window=1
+let Tlist_Use_Right_Window=0
+let Tlist_Use_Horiz_Window=1
 
 " @TODO: Move the below to plugins.
 
