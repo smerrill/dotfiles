@@ -22,6 +22,9 @@ else
   colorscheme vilight2
 endif
 
+" Configure SuperTab completion
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -146,6 +149,9 @@ endif
 
 " Wrapping huge lines take a LOT of processor time. Who needs it?
 set nowrap
+
+" Always open NERDTree!
+autocmd VimEnter * NERDTreeToggle
 
 " The default .vimrc follows.
 
