@@ -16,6 +16,7 @@ set guioptions-=T
 
 " Always open NERDTree in graphical mode only.
 autocmd VimEnter * NERDTreeToggle
+autocmd VimEnter * wincmd p
 
 " Set colors again for vim's benefit (?)
 colorscheme vilight2
