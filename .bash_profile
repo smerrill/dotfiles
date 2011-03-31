@@ -9,8 +9,8 @@ export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
 # Terminal coloring
 export CLICOLOR=1
 
-# Use mvim as editor for commits, etc.
-export EDITOR="vim -f"
+# Use vim as editor for commits, etc.
+export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

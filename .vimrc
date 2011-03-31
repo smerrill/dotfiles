@@ -7,6 +7,9 @@
 " This apparently must be first. Bye, vi-compatibility!
 set nocompatible
 
+" Stop vim from exiting with status 1.
+filetype on
+
 " Autoload with Pathogen.
 filetype off
 call pathogen#helptags()
