@@ -150,9 +150,6 @@ endif
 " Wrapping huge lines take a LOT of processor time. Who needs it?
 set nowrap
 
-" Always open NERDTree!
-autocmd VimEnter * NERDTreeToggle
-
 " The default .vimrc follows.
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,

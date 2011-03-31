@@ -14,6 +14,9 @@ set guioptions-=T
 " Save on losing focus
 " au FocusLost * :wa
 
+" Always open NERDTree in graphical mode only.
+autocmd VimEnter * NERDTreeToggle
+
 " Set colors again for vim's benefit (?)
 colorscheme vilight2
 

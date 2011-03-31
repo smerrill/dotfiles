@@ -10,7 +10,7 @@ export PATH="$(brew --prefix)/sbin:$(brew --prefix)/bin:$PATH"
 export CLICOLOR=1
 
 # Use mvim as editor for commits, etc.
-export EDITOR="mvim -f"
+export EDITOR="vim -f"
 
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
