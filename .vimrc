@@ -25,10 +25,6 @@ else
   colorscheme vilight2
 endif
 
-" Configure SuperTab completion
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -67,7 +63,7 @@ set list
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v
