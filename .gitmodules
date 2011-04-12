@@ -1,0 +1,3 @@
+[submodule ".vim/bundle/varnish"]
+	path = .vim/bundle/varnish
+	url = git@github.com:smerrill/vcl-vim-plugin.git
