@@ -33,7 +33,7 @@ set autoindent
 set smartindent
 
 " Show commands in flight
-set showcmd   
+set showcmd
 
 " Give some context while scrolling.
 set scrolloff=3
@@ -62,7 +62,8 @@ set wildmode=list:longest
 set list
 nmap <leader>l :set list!<CR>
 
-" Use the same symbols as TextMate for tabstops and EOLs
+" Use the same symbols as TextMate for tabstops
+" and a handy dot for trailing spaces.
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
 " Tame searching and moving, a la Steve Losh.
