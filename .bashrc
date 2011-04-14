@@ -5,6 +5,11 @@
 # check for interactive
 [[ $- = *i* ]] || return
 
+# TODO: Add git prompt.
+
+# Handle resizes gracefully.
+shopt -s checkwinsize
+
 hg_ps1() {
     hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
 }
