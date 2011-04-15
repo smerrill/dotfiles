@@ -1,0 +1,72 @@
+! ===[Font Configuration]==========================
+Xft.dpi: 72
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+urxvt.font: xft:Meslo LG S:pixelsize=11
+urxvt.boldFont: xft:Meslo LG S:pixelsize=11:style=bold
+urxvt.italicFont: xft:Meslo LG S:pixelsize=11:style=italic
+
+! ===[Misc Configuration]==========================
+urxvt.geometry: 120x40
+urxvt.visualBell: true
+urxvt.saveLines: 4096
+urxvt.fading: 25%
+urxvt.cursorBlink: true
+urxvt.loginShell: true
+
+! ===[Extensions]==================================
+urxvt.perl-lib:          /Users/smerrill/dotfiles/urxvt-perls
+urxvt.perl-ext-common:   default,macosx-clipboard,url-select,keyboard-select
+urxvt.urlLauncher:       open
+urxvt.urlButton:         1
+urxvt.matcher.button:    1
+urxvt.underlineURLs:     true
+!urxvt.keysym.W-c: perl:macosx-clipboard:copy
+urxvt.keysym.M-v:            perl:macosx-clipboard:paste
+urxvt.keysym.M-k:            perl:keyboard-select:activate
+URxvt.searchable-scrollback: M-f
+urxvt.keysym.M-u:            perl:url-select:select_next
+!urxvt.searchable-scrollback: M-f
+
+!urxvt.perl-ext-common: macosx-clipboard
+!urxvt.keysym.M-c: perl:macosx-clipboard:copy
+!urxvt.keysym.M-v: perl:macosx-clipboard:paste
+
+! ===[Colorscheme]=================================
+urxvt.background: #2B2B2B
+urxvt.foreground: #DEDEDE
+urxvt.saveLines: 4096
+urxvt.scrollBar: true
+urxvt.scrollBar_right: true
+urxvt.scrollstyle: plain
+
+! black
+urxvt.color0  : #2E3436
+urxvt.color8  : #555753
+! red
+urxvt.color1  : #CC0000
+urxvt.color9  : #EF2929
+! green
+urxvt.color2  : #4E9A06
+urxvt.color10 : #8AE234
+! yellow
+urxvt.color3  : #C4A000
+urxvt.color11 : #FCE94F
+! blue
+urxvt.color4  : #3465A4
+urxvt.color12 : #729FCF
+! magenta
+urxvt.color5  : #75507B
+urxvt.color13 : #AD7FA8
+! cyan
+urxvt.color6  : #06989A
+urxvt.color14 : #34E2E2
+! white
+urxvt.color7  : #D3D7CF
+urxvt.color15 : #EEEEEC
+

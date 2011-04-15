@@ -1,0 +1,13 @@
+#!/bin/bash
+
+type -P urxvtc > /dev/null || {
+  echo 'ERROR: Could not find urxvt.'
+  exit 1
+}
+
+urxvtc "$@"
+if [ $? -eq 2 ]; then
+   urxvtd -q -o -f
+   urxvtc "$@"
+fi
+

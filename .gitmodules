@@ -1,3 +1,6 @@
 [submodule ".vim/bundle/varnish"]
 	path = .vim/bundle/varnish
 	url = git@github.com:smerrill/vcl-vim-plugin.git
+[submodule "urxvt-perls"]
+	path = urxvt-perls
+	url = https://github.com/smerrill/urxvt-perls
