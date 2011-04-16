@@ -1,4 +1,4 @@
-" 
+"
 " .vimrc
 "
 " Steven Merrill (@stevenmerrill)
@@ -22,7 +22,8 @@ if !has("gui_running")
   colorscheme mustang
 else
   " Set color scheme
-  colorscheme vilight2
+  set background=light
+  colorscheme solarized
 endif
 
 " Allow backspacing over everything in insert mode
@@ -127,7 +128,7 @@ hi scalaValName gui=underline
 hi scalaVarName gui=underline
 
 " Lots of history / undo.
-set history=1000    
+set history=1000
 set undolevels=1000
 
 " Set the terminal title

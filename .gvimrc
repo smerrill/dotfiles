@@ -19,5 +19,5 @@ set guioptions-=T
 "autocmd VimEnter * wincmd p
 
 " Set colors again for vim's benefit (?)
-colorscheme vilight2
+"colorscheme vilight2
 

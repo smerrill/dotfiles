@@ -4,3 +4,6 @@
 [submodule "urxvt-perls"]
 	path = urxvt-perls
 	url = https://github.com/smerrill/urxvt-perls
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
