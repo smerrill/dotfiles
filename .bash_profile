@@ -13,7 +13,7 @@ Darwin)
   fi
 
   # Put homebrew PHP ahead in $PATH a la http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/
-  export PATH=$HOME/bin:$brew_prefix/sbin:$brew_prefix/bin:$PATH
+  export PATH=$brew_prefix/sbin:$brew_prefix/bin:$PATH
 
   # Terminal coloring
   export CLICOLOR=1
@@ -21,6 +21,7 @@ Darwin)
   # Use vim as editor for commits, etc.
   export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
   alias vim=$EDITOR
+  alias gvim=$EDITOR
 
   # EC2 Tools.
   export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
@@ -32,7 +33,14 @@ Darwin)
     export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-62308/jars"
   }
   ;;
+Linux)
+  # Muscle memory is a powerful thing.
+  alias mvim=gvim
+  ;;
 esac
+
+# Always set up $HOME/bin in the front of $PATH.
+export PATH=$HOME/bin:$PATH
 
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
