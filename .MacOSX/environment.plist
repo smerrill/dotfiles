@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LANG</key>
+	<string>en_US.UTF-8</string>
+	<key>MAVEN_OPTS</key>
+	<string>-noverify -javaagent:/Applications/ZeroTurnaround/JRebel/jrebel.jar</string>
+	<key>SCALA_HOME</key>
+	<string>/usr/local/Cellar/scala/2.8.1/</string>
+</dict>
+</plist>
