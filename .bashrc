@@ -2,15 +2,18 @@
 # .bashrc - interactive shell configuration
 #
 
-# check for interactive
+# Double-check that we are in an interactive session.
 [[ $- = *i* ]] || return
+
+# Handle resizes gracefully.
+shopt -s checkwinsize
+
+# Terminal.app sucks.
+[[ "$TERM_PROGRAM" == "Apple_Terminal" ]] && return
 
 # Set up git prompt options.
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
-
-# Handle resizes gracefully.
-shopt -s checkwinsize
 
 hg_ps1() {
     hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
