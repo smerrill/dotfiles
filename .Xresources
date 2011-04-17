@@ -13,4 +13,5 @@ urxvt.perl-lib:          /home/smerrill/dotfiles/urxvt-perls
 urxvt.perl-ext-common:   default,clipboard,url-select,keyboard-select
 urxvt.keysym.M-c:        clipboard:copy
 urxvt.keysym.M-v:        clipboard:paste
+urxvt.urlLauncher:       /usr/bin/chromium-browser
 
