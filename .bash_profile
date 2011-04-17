@@ -35,12 +35,22 @@ Darwin)
   ;;
 Linux)
   # Muscle memory is a powerful thing.
-  alias mvim=gvim
+  type -P gvim > /dev/null && {
+    alias mvim=gvim
+  } || {
+  alias mvim=vim
+  }
+
+  # Set a proper $EDITOR.
+  export EDITOR="vim"
   ;;
 esac
 
 # Always set up $HOME/bin in the front of $PATH.
 export PATH=$HOME/bin:$PATH
+
+# If there are local (non-Git) overrides, load them.
+[[ -f ~/.local_profile ]] && . ~/.local_profile
 
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
