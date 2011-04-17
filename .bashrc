@@ -5,7 +5,9 @@
 # check for interactive
 [[ $- = *i* ]] || return
 
-# TODO: Add git prompt.
+# Set up git prompt options.
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Handle resizes gracefully.
 shopt -s checkwinsize
