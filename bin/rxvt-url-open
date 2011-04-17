@@ -1,0 +1,10 @@
+#!/bin/bash
+
+case $(uname) in
+Darwin)
+  open $1 2> /dev/null || {
+    open http://$1
+  }
+  ;;
+esac
+
