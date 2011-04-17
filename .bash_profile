@@ -21,7 +21,7 @@ Darwin)
   # Use vim as editor for commits, etc.
   export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
   alias vim=$EDITOR
-  alias gvim=$EDITOR
+  alias gvim=mvim
 
   # EC2 Tools.
   export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
