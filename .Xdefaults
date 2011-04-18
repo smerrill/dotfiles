@@ -23,7 +23,7 @@ urxvt.loginShell: true
 urxvt.perl-lib:          /Users/smerrill/dotfiles/urxvt-perls
 urxvt.perl-ext-common:   default,macosx-clipboard,url-select,keyboard-select
 urxvt.keysym.M-v:        perl:macosx-clipboard:paste
-urxvt.keysym.M-k:        perl:keyboard-select:activate
+urxvt.keysym.M-y:        perl:keyboard-select:activate
 
 urxvt.urlLauncher:       /Users/smerrill/bin/rxvt-url-open
 urxvt.urlButton:1
