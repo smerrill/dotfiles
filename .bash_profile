@@ -46,6 +46,9 @@ Linux)
   ;;
 esac
 
+# Do you like a colorful grep? I do!
+alias grep="grep --color=auto"
+
 # Always set up $HOME/bin in the front of $PATH.
 export PATH=$HOME/bin:$PATH
 

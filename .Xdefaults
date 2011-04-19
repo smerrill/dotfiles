@@ -7,9 +7,12 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-urxvt.font: xft:Meslo LG S:pixelsize=11
-urxvt.boldFont: xft:Meslo LG S:pixelsize=11:style=bold
-urxvt.italicFont: xft:Meslo LG S:pixelsize=11:style=italic
+urxvt.font: xft:Mensch:pixelsize=13
+urxvt.boldFont: xft:Mensch:pixelsize=13:style=bold
+urxvt.italicFont: xft:Mensch:pixelsize=13:style=italic
+!urxvt.font: xft:Meslo LG S:pixelsize=11
+!urxvt.boldFont: xft:Meslo LG S:pixelsize=11:style=bold
+!urxvt.italicFont: xft:Meslo LG S:pixelsize=11:style=italic
 
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
@@ -32,7 +35,7 @@ urxvt.underlineURLs:     true
 urxvt.searchable-scrollback: M-f
 urxvt.keysym.M-u:            perl:url-select:select_next
 
-# Tabbed browsing that jives with my Mac OS X-learned muscle memory.
+! Tabbed browsing that jives with my Mac OS X-learned muscle memory.
 urxvt.autohide:            true
 urxvt.keysym.M-t:          perl:tabbedex:new_tab
 urxvt.keysym.M-braceright: perl:tabbedex:next_tab

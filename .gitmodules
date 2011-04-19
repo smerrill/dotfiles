@@ -10,3 +10,6 @@
 [submodule "urxvt-tabbedex"]
 	path = urxvt-tabbedex
 	url = git@github.com:smerrill/urxvt-tabbedex.git
+[submodule ".vim/bundle/checksyntax_vim"]
+	path = .vim/bundle/checksyntax_vim
+	url = https://github.com/tomtom/checksyntax_vim.git
