@@ -20,8 +20,8 @@ urxvt.cursorBlink: true
 urxvt.loginShell: true
 
 ! ===[Extensions]==================================
-urxvt.perl-lib:          /Users/smerrill/dotfiles/urxvt-perls
-urxvt.perl-ext-common:   default,macosx-clipboard,url-select,keyboard-select
+urxvt.perl-lib:          /Users/smerrill/dotfiles/urxvt-perls:/Users/smerrill/dotfiles/urxvt-tabbedex
+urxvt.perl-ext-common:   default,macosx-clipboard,url-select,keyboard-select,tabbedex
 urxvt.keysym.M-v:        perl:macosx-clipboard:paste
 urxvt.keysym.M-y:        perl:keyboard-select:activate
 
@@ -31,6 +31,12 @@ urxvt.matcher.button:    1
 urxvt.underlineURLs:     true
 urxvt.searchable-scrollback: M-f
 urxvt.keysym.M-u:            perl:url-select:select_next
+
+# Tabbed browsing that jives with my Mac OS X-learned muscle memory.
+urxvt.autohide:            true
+urxvt.keysym.M-t:          perl:tabbedex:new_tab
+urxvt.keysym.M-braceright: perl:tabbedex:next_tab
+urxvt.keysym.M-braceleft:  perl:tabbedex:prev_tab
 
 ! ===[Colorscheme]=================================
 urxvt.background: #2B2B2B
