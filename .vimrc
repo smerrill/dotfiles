@@ -100,12 +100,12 @@ set number
 
 " Sidebar plugin options
 let NERDTreeShowHidden=1
-let Tlist_Use_Right_Window=0
+let Tlist_Use_Right_Window=1
 let Tlist_Use_Horiz_Window=1
 
 " @TODO: Move the below to plugins.
 
-" Set up vim for optimal use with PHP.
+" Set up vim for optimal use with Drupal.
 au BufNewFile,BufRead *.engine set filetype=php
 au BufNewFile,BufRead *.theme set filetype=php
 au BufNewFile,BufRead *.module set filetype=php
