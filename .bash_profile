@@ -38,7 +38,7 @@ Linux)
   type -P gvim > /dev/null && {
     alias mvim=gvim
   } || {
-  alias mvim=vim
+    alias mvim=vim
   }
 
   # Set a proper $EDITOR.
