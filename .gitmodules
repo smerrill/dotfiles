@@ -1,15 +1,15 @@
 [submodule ".vim/bundle/varnish"]
 	path = .vim/bundle/varnish
-	url = git@github.com:smerrill/vcl-vim-plugin.git
+	url = https://github.com/smerrill/vcl-vim-plugin.git
 [submodule "urxvt-perls"]
 	path = urxvt-perls
-	url = https://github.com/smerrill/urxvt-perls
+	url = https://github.com/smerrill/urxvt-perls.git
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "urxvt-tabbedex"]
 	path = urxvt-tabbedex
-	url = git@github.com:smerrill/urxvt-tabbedex.git
+	url = https://github.com/smerrill/urxvt-tabbedex.git
 [submodule ".vim/bundle/checksyntax_vim"]
 	path = .vim/bundle/checksyntax_vim
 	url = https://github.com/tomtom/checksyntax_vim.git

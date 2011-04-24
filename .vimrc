@@ -16,6 +16,9 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
+" Fix UTF-8 issues on Linuxes.
+scriptencoding utf-8
+
 if !has("gui_running")
   " Oh, OS X.
   set t_Co=256
