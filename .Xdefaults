@@ -7,12 +7,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-urxvt.font: xft:Mensch:pixelsize=13
-urxvt.boldFont: xft:Mensch:pixelsize=13:style=bold
-urxvt.italicFont: xft:Mensch:pixelsize=13:style=italic
-!urxvt.font: xft:Meslo LG S:pixelsize=11
-!urxvt.boldFont: xft:Meslo LG S:pixelsize=11:style=bold
-!urxvt.italicFont: xft:Meslo LG S:pixelsize=11:style=italic
+urxvt.font: xft:Mensch:pixelsize=12
 
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
