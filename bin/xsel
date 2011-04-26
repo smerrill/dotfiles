@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $@ == "-ib" ]]; then
+  pbcopy;
+elif [[ $@ == '-ob' ]]; then
+  pbpaste;
+else
+  echo "ERROR: Operation ${@} not supported.";
+  exit 1;
+fi

@@ -4,17 +4,6 @@
 
 case $(uname) in
 Darwin)
-  # Mimic xsel simply for the benefit of X11 apps.
-  xsel() {
-    if [[ $@ == "-ib" ]]; then
-      command pbcopy;
-    elif [[ $@ == '-ob' ]]; then
-      command pbpaste;
-    else
-      command xsel "$@";
-    fi
-  }
-
   # Find homebrew prefix if it is available.
   brew_prefix=$(brew --prefix)
 
