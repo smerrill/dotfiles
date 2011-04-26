@@ -19,8 +19,8 @@ urxvt.loginShell: true
 
 ! ===[Extensions]==================================
 urxvt.perl-lib:          /Users/smerrill/dotfiles/.urxvt/urxvt-perls:/Users/smerrill/dotfiles/.urxvt/urxvt-tabbedex
-urxvt.perl-ext-common:   default,macosx-clipboard,url-select,keyboard-select,tabbedex
-urxvt.keysym.M-v:        perl:macosx-clipboard:paste
+urxvt.perl-ext-common:   default,clipboard,url-select,keyboard-select,tabbedex
+urxvt.keysym.M-v:        perl:clipboard:paste
 urxvt.keysym.M-y:        perl:keyboard-select:activate
 
 urxvt.urlLauncher:       /Users/smerrill/bin/rxvt-url-open
