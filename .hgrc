@@ -15,6 +15,13 @@ hgext.purge=
 hgshelve=~/.mercurial/hgshelve.py
 prompt=~/.mercurial/prompt.py
 color=
+hgext.eol =
+
+[repository] 
+native = LF
+
+[eol]
+only-consistent = False
 
 [extdiff]
 cmd.diffmerge = /usr/bin/diffmerge
