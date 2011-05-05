@@ -68,7 +68,7 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops
 " and a handy dot for trailing spaces.
-set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
+set listchars=tab:▸\ ,eol:¬,trail:█,extends:›,precedes:‹
 
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v
@@ -115,6 +115,7 @@ au BufNewFile,BufRead *.module set filetype=php
 au BufNewFile,BufRead *.test set filetype=php
 au BufNewFile,BufRead *.install set filetype=php
 au BufNewFile,BufRead *.inc set filetype=php
+au BufNewFile,BufRead *.profile set filetype=php
 
 " Good completion.
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
