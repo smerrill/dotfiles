@@ -7,7 +7,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-urxvt.font: xft:Mensch:pixelsize=12
+urxvt.font: xft:Mensch:pixelsize=11
 
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
