@@ -12,8 +12,8 @@ urxvt.font: xft:Mensch:pixelsize=11
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
 urxvt.visualBell: true
-urxvt.saveLines: 4096
-urxvt.fading: 25%
+urxvt.saveLines: 8192
+urxvt.fading: 0
 urxvt.cursorBlink: true
 urxvt.loginShell: true
 
@@ -36,35 +36,11 @@ urxvt.keysym.M-t:          perl:tabbedex:new_tab
 urxvt.keysym.M-braceright: perl:tabbedex:next_tab
 urxvt.keysym.M-braceleft:  perl:tabbedex:prev_tab
 
-! ===[Colorscheme]=================================
-urxvt.background: #2B2B2B
-urxvt.foreground: #DEDEDE
+! ===[UI Config]===================================
 urxvt.scrollBar: true
 urxvt.scrollBar_right: true
 urxvt.scrollstyle: plain
 
-! black
-urxvt.color0  : #2E3436
-urxvt.color8  : #555753
-! red
-urxvt.color1  : #CC0000
-urxvt.color9  : #EF2929
-! green
-urxvt.color2  : #4E9A06
-urxvt.color10 : #8AE234
-! yellow
-urxvt.color3  : #C4A000
-urxvt.color11 : #FCE94F
-! blue
-urxvt.color4  : #3465A4
-urxvt.color12 : #729FCF
-! magenta
-urxvt.color5  : #75507B
-urxvt.color13 : #AD7FA8
-! cyan
-urxvt.color6  : #06989A
-urxvt.color14 : #34E2E2
-! white
-urxvt.color7  : #D3D7CF
-urxvt.color15 : #EEEEEC
+! ===[Colorscheme]=================================
+#include ".colors/solarized-light"
 
