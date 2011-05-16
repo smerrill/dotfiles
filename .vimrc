@@ -29,6 +29,9 @@ else
   colorscheme solarized
 endif
 
+" Keep swp files under ~/.vim/swap
+set directory=~/.vim/swap,~/tmp,.
+
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
