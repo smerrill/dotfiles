@@ -11,13 +11,6 @@ endif
 
 set guioptions-=T
 
-" Save on losing focus
-" au FocusLost * :wa
-
-" Always open NERDTree in graphical mode only.
-"autocmd VimEnter * NERDTreeToggle
-"autocmd VimEnter * wincmd p
-
-" Set colors again for vim's benefit (?)
-"colorscheme vilight2
+" On startup, if not editing one or more files, open NERDTree.
+au VimEnter * if empty(expand('%')) | NERDTreeToggle | wincmd p | endif
 
