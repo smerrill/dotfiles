@@ -3,3 +3,4 @@
 *.swp
 *.swo
 .vim/.netrwhist
+.profile.d/local*

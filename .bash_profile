@@ -52,8 +52,10 @@ alias grep="grep --color=auto"
 # Always set up $HOME/bin in the front of $PATH.
 export PATH=$HOME/bin:$PATH
 
-# If there are local (non-Git) overrides, load them.
-[[ -f ~/.local_profile ]] && . ~/.local_profile
+# Load other files for bash's use, including some that may not be in git.
+[[ -d ~/.profile.d ]] && for i in ~/.profile.d/*; do
+  source $i
+done
 
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

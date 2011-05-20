@@ -1,0 +1,110 @@
+__drush_aliases ()
+{
+	local i
+	for i in $(drush site-alias 2>/dev/null); do
+		echo $i
+	done
+}
+
+__drush_commands ()
+{
+  local i commands
+  if [ -z "$1" ]; then
+    commands=$(drush help --pipe)
+  else
+    commands=$(drush "$1" help --pipe)
+  fi
+
+  for i in $commands; do
+	  echo $i
+  done
+}
+
+# __drushcomp_1 requires 2 arguments
+__drushcomp_1 ()
+{
+	local c IFS=' '$'\t'$'\n'
+	for c in $1; do
+		case "$c$2" in
+		--*=*) printf %s$'\n' "$c$2" ;;
+		*.)    printf %s$'\n' "$c$2" ;;
+		*)     printf %s$'\n' "$c$2 " ;;
+		esac
+	done
+}
+
+# __drushcomp accepts 1, 2, 3, or 4 arguments
+# generates completion reply with compgen
+__drushcomp ()
+{
+	local cur="${COMP_WORDS[COMP_CWORD]}"
+	if [ $# -gt 2 ]; then
+		cur="$3"
+	fi
+	case "$cur" in
+	--*=)
+		COMPREPLY=()
+		;;
+	*)
+		local IFS=$'\n'
+		COMPREPLY=($(compgen -P "${2-}" \
+			-W "$(__drushcomp_1 "${1-}" "${4-}")" \
+			-- "$cur"))
+		;;
+	esac
+}
+
+_drush ()
+{
+	local i c=1 command __drush_dir site_alias
+	while [ $c -lt $COMP_CWORD ]; do
+		i="${COMP_WORDS[c]}"
+		case "$i" in
+		--drush-dir=*) __drush_dir="${i#--drush-dir=}" ;;
+		--bare)      __drush_dir="." ;;
+		--version|-p|--paginate) ;;
+		--help) command="help"; break ;;
+		@*) site_alias="$i" ;;
+		*) command="$i"; break ;;
+		esac
+		c=$((++c))
+	done
+
+	if [ -z "$command" ]; then
+		case "${COMP_WORDS[COMP_CWORD]}" in
+		--*)   __drushcomp "
+			--paginate
+			--no-pager
+			--drush-dir=
+			--bare
+			--version
+			--exec-path
+			--html-path
+			--work-tree=
+			--help
+			"
+			;;
+		*)
+		  if [ -z "$site_alias" ]; then
+		    __drushcomp "$(__drush_aliases) $(__drush_commands)"
+		  else
+		    __drushcomp "$(__drush_commands $site_alias)"
+		  fi
+      ;;
+		esac
+		return
+	fi
+
+  # local completion_func="_drush_${command//-/_}"
+  # declare -F $completion_func >/dev/null && $completion_func && return
+  # 
+  # local expansion=$(__drush_aliased_command "$command")
+  # if [ -n "$expansion" ]; then
+  #   completion_func="_drush_${expansion//-/_}"
+  #   declare -F $completion_func >/dev/null && $completion_func
+  # fi
+}
+
+complete -o bashdefault -o default -o nospace -F _drush drush 2>/dev/null \
+	|| complete -o default -o nospace -F _drush drush
+
