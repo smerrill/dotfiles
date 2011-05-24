@@ -43,8 +43,14 @@ Linux)
 
   # Set a proper $EDITOR.
   export EDITOR="vim"
+
+  # Colorful ls - I needs it!
+  alias ls="ls --color=auto"
   ;;
 esac
+
+# Easy ls -aFl
+alias ll="ls -aFl"
 
 # Do you like a colorful grep? I do!
 alias grep="grep --color=auto"
