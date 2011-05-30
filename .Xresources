@@ -22,4 +22,7 @@ urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt
 urxvt.keysym.M-c:        perl:clipboard:copy
 urxvt.urlLauncher:       /usr/bin/chromium
 
-#include ".colors/gnometerminal"
+! Back to normal Linux copypasta.
+URxvt.copyCommand:  xsel -ib
+URxvt.pasteCommand: xsel -ob
+
