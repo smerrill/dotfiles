@@ -1,0 +1,2 @@
+# Start up ssh-agent upon starting any session.
+eval `ssh-agent`
