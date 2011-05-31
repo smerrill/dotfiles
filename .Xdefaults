@@ -8,6 +8,9 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 urxvt.font: xft:Mensch:pixelsize=11
+urxvt.boldFont: xft:Mensch:pixelsize=11
+urxvt.italicFont: xft:Mensch:pixelsize=11:style=italic
+urxvt.boldItalicFont: xft:Mensch:pixelsize=11:style=italic
 
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
