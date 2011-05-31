@@ -1,2 +1,4 @@
-# Start up ssh-agent upon starting any session.
-eval `ssh-agent`
+[ -f /etc/arch-release ] && {
+  # Start up ssh-agent upon starting any session.
+  eval `ssh-agent`
+}
