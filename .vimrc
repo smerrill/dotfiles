@@ -71,7 +71,7 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops
 " and a handy dot for trailing spaces.
-set listchars=tab:▸\ ,eol:¬,trail:█,extends:›,precedes:‹
+set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v

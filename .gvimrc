@@ -1,6 +1,6 @@
 " Set up GUI options.
 if has("mac")
-  set guifont=Mensch:h12
+  set guifont=Inconsolata:h14
 elseif has("gui_gtk2")
   set guifont=Mensch\ 10
 endif
