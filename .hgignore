@@ -1,9 +1,0 @@
-syntax:regexp
-\.DS_Store
-\.sw(o|p)
-\.netr
-\.git
-~$
-\.o$
-\.pyc$
-\.orig$
