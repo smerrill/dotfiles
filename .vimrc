@@ -22,7 +22,7 @@ scriptencoding utf-8
 if !has("gui_running")
   " Oh, OS X.
   set t_Co=256
-  colorscheme mustang
+  "colorscheme mustang
 else
   " Set color scheme
   set background=light

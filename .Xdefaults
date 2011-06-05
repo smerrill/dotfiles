@@ -7,10 +7,10 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-urxvt.font: xft:Inconsolata:pixelsize=13
-urxvt.boldFont: xft:Inconsolata:pixelsize=13
-urxvt.italicFont: xft:Inconsolata:pixelsize=13:style=italic
-urxvt.boldItalicFont: xft:Inconsolata:pixelsize=13:style=italic
+urxvt.font: xft:Inconsolata:pixelsize=14
+urxvt.boldFont: xft:Inconsolata:pixelsize=14
+urxvt.italicFont: xft:Inconsolata:pixelsize=14:style=italic
+urxvt.boldItalicFont: xft:Inconsolata:pixelsize=14:style=italic
 
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
