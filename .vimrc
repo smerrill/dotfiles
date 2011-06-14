@@ -155,8 +155,14 @@ if has('mouse')
   set mouse=a
 endif
 
-" Wrapping huge lines take a LOT of processor time. Who needs it?
-set nowrap
+" After much consideration, I do want wrapping.
+set wrap
+" My kingdom for 'list' and 'linebreak' playing nicely together.
+" set linebreak
+
+" But since I'm wrapping lines, I do expect j and k to move one line in the editor, not in the file.
+nmap j gj
+nmap k gk
 
 " The default .vimrc follows.
 
