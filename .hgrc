@@ -16,8 +16,9 @@ hgshelve=~/.mercurial/hgshelve.py
 prompt=~/.mercurial/prompt.py
 color=
 hgext.eol =
+mercurial_keyring =
 
-[repository] 
+[repository]
 native = LF
 
 [eol]
@@ -43,4 +44,7 @@ diff = --git
 
 [alias]
 changelog = outgoing --no-merges --template "Revision {node|short} by {author} on {date|shortdate}:\n{desc}\n\n"
+
+[web]
+cacerts = ~/.mercurial/dummycert.pem
 
