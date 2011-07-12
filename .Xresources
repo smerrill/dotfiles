@@ -4,7 +4,7 @@
 #include ".Xdefaults"
 
 ! ===[Xft Configuration]===========================
-Xft.dpi: 156
+Xft.dpi: 96
 Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
@@ -12,10 +12,10 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
 ! ===[Font Configuration]==========================
-urxvt.font: xft:Mensch:pixelsize=13
-urxvt.boldFont: xft:Mensch:pixelsize=13
-urxvt.italicFont: xft:Mensch:pixelsize=13:style=italic
-urxvt.boldItalicFont: xft:Mensch:pixelsize=13:style=italic
+urxvt.font: xft:Mensch:pixelsize=11
+urxvt.boldFont: xft:Mensch:pixelsize=11
+urxvt.italicFont: xft:Mensch:pixelsize=11:style=italic
+urxvt.boldItalicFont: xft:Mensch:pixelsize=11:style=italic
 
 ! ===[Extensions]==================================
 urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-tabbedex
