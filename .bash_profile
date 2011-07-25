@@ -18,8 +18,12 @@ Darwin)
   # Terminal coloring
   export CLICOLOR=1
 
-  # Use vim as editor for commits, etc.
-  export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+  # Use vim as editor for commits, etc. Recognize if the MacVim app
+  # is in ~/Applications, as `brew linkapps` will do.
+  EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+  [[ -d ~/Applications/MacVim.app ]] && EDITOR="~${EDITOR}"
+
+  export EDITOR="${EDITOR}"
   alias vim=$EDITOR
   alias gvim=mvim
 
