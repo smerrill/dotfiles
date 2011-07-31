@@ -70,7 +70,7 @@ export PATH=$HOME/bin:$PATH
 done
 
 # This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # If we are in an interactive session, source bashrc.
 [[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
