@@ -6,7 +6,7 @@ extdiff = diffmerge
 # Run 'easy_install hg-git' if this errors out.
 [extensions]
 hgext.bookmarks =
-hggit = 
+;hggit = 
 hgext.fetch=
 hgext.convert=
 hgext.mq=
