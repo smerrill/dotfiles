@@ -11,12 +11,9 @@ shopt -s checkwinsize
 # Terminal.app sucks.
 [[ "$TERM_PROGRAM" == "Apple_Terminal" ]] && return
 
-# Set up git prompt options.
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-
-hg_ps1() {
-    hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
+# Use vcprompt.
+vcprompt_ps1() {
+  [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m'
 }
 
 # a functional but sane prompt
@@ -35,11 +32,10 @@ bash_prompt() {
   (( UID != 0 )) && local UC=$W || local UC=$R
 
   RET_VALUE='$((( RET )) && printf ":\[\e[1;31m\]$RET\[\e[0m\]")'
-  HG_INFO='$(hg_ps1)'
-  GIT_INFO='$(__git_ps1 " on %s")'
+  VC_INFO='$(vcprompt_ps1)'
 
   # space goes inside the printf so its not there when there's no git branch
-  PS1=" ${EMK}┌┤${UC}\u${EMK}@${UC}\h${RET_VALUE} ${EMG}[\D{%Y-%m-%d %H:%M:%S}] ${EMB}\w${EMM}${HG_INFO}${GIT_INFO}${EMW}\n ${EMK}└╼${NONE} "
+  PS1=" ${EMK}┌┤${UC}\u${EMK}@${UC}\h${RET_VALUE} ${EMG}[\D{%Y-%m-%d %H:%M:%S}] ${EMB}\w${EMM}${VC_INFO}${EMW}\n ${EMK}└╼${NONE} "
   PS4='+$BASH_SOURCE:$LINENO:$FUNCNAME: '
 }
 
