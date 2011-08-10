@@ -35,7 +35,7 @@ bash_prompt() {
   VC_INFO='$(vcprompt_ps1)'
 
   # space goes inside the printf so its not there when there's no git branch
-  PS1=" ${EMK}┌┤${UC}\u${EMK}@${UC}\h${RET_VALUE} ${EMG}[\D{%Y-%m-%d %H:%M:%S}] ${EMB}\w${EMM}${VC_INFO}${EMW}\n ${EMK}└╼${NONE} "
+  PS1=" ${EMK}┌┤${UC}\u${EMK}@${UC}\h${RET_VALUE} ${EMG}[\D{%b %d %H:%M:%S}] ${EMB}\w${EMM}${VC_INFO}${EMW}\n ${EMK}└╼${NONE} "
   PS4='+$BASH_SOURCE:$LINENO:$FUNCNAME: '
 }
 
