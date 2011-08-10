@@ -13,7 +13,7 @@ shopt -s checkwinsize
 
 # Use vcprompt.
 vcprompt_ps1() {
-  [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m'
+  [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m%u'
 }
 
 # a functional but sane prompt
