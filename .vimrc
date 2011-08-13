@@ -109,6 +109,9 @@ let NERDTreeShowHidden=1
 let Tlist_Use_Right_Window=1
 let Tlist_Use_Horiz_Window=1
 
+" Get out of insert mode without leaving home row.
+inoremap jk <esc>
+
 " @TODO: Move the below to plugins.
 
 " Set up vim for optimal use with Drupal.
