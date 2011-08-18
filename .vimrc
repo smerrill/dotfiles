@@ -112,6 +112,17 @@ let Tlist_Use_Horiz_Window=1
 " Get out of insert mode without leaving home row.
 inoremap jk <esc>
 
+" CoffeeScript customizations
+
+" Lint files as you write them.
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+
+" Fold by indentation
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
+" 2 space indentation
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
 " @TODO: Move the below to plugins.
 
 " Set up vim for optimal use with Drupal.

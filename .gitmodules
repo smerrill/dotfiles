@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/vagrant"]
 	path = .vim/bundle/vagrant
 	url = https://github.com/smerrill/vagrant-vim
+[submodule ".vim/bundle/coffeescript"]
+	path = .vim/bundle/coffeescript
+	url = https://github.com/kchmck/vim-coffee-script
