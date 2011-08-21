@@ -21,7 +21,7 @@ Darwin)
   # Use vim as editor for commits, etc. Recognize if the MacVim app
   # is in ~/Applications, as `brew linkapps` will do.
   EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
-  [[ -d ~/Applications/MacVim.app ]] && EDITOR="~${EDITOR}"
+  [[ -d $HOME/Applications/MacVim.app ]] && EDITOR="${HOME}${EDITOR}"
 
   export EDITOR="${EDITOR}"
   alias vim=$EDITOR
