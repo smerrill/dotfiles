@@ -55,6 +55,9 @@ Linux)
   ;;
 esac
 
+# Paste to private gist.
+alias gaste="pbpaste | gist -p"
+
 # Easy ls -aFl
 alias ll="ls -aFl"
 
