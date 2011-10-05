@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim
+[submodule ".drush/phpsh"]
+	path = .drush/phpsh
+	url = http://git.drupal.org/project/phpsh.git
