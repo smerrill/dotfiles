@@ -12,7 +12,7 @@ endif
 set guioptions-=T
 
 " Check spelling in a graphical Vim.
-set spell
+" set spell
 
 " On startup, if not editing one or more files, open NERDTree.
 au VimEnter * if empty(expand('%')) | NERDTreeToggle | wincmd p | endif
