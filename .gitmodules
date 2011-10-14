@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/checksyntax_vim"]
-	path = .vim/bundle/checksyntax_vim
-	url = https://github.com/tomtom/checksyntax_vim.git
 [submodule ".urxvt/urxvt-tabbedex"]
 	path = .urxvt/urxvt-tabbedex
 	url = https://github.com/smerrill/urxvt-tabbedex.git
@@ -43,9 +40,6 @@
 [submodule ".vim/bundle/taglist"]
 	path = .vim/bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule ".vim/bundle/vcscommand"]
-	path = .vim/bundle/vcscommand
-	url = https://github.com/vim-scripts/vcscommand.vim.git
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
