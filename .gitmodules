@@ -73,3 +73,12 @@
 [submodule ".drush/feather"]
 	path = .drush/feather
 	url = http://git.drupal.org/project/feather.git
+[submodule ".vim/bundle/vim-statline"]
+	path = .vim/bundle/vim-statline
+	url = https://github.com/millermedeiros/vim-statline.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/fugitive"]
+	path = .vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
