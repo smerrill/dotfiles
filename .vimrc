@@ -123,6 +123,9 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 " 2 space indentation
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
+" Always show the statusline.
+set laststatus=2
+
 " @TODO: Move the below to plugins.
 
 " Set up vim for optimal use with Drupal.
