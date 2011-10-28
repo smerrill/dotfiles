@@ -14,6 +14,9 @@ set guioptions-=T
 " Check spelling in a graphical Vim.
 " set spell
 
+" By default, do not print a header.
+set printoptions=header:0
+
 " On startup, if not editing one or more files, open NERDTree.
 au VimEnter * if empty(expand('%')) | NERDTreeToggle | wincmd p | endif
 
