@@ -73,6 +73,9 @@ nmap <leader>l :set list!<CR>
 " and a handy dot for trailing spaces.
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
+" Do not check puppet syntax, since Ruby is le slow.
+let g:syntastic_disabled_filetypes = ['puppet']
+
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v
 vnoremap / /\v
