@@ -74,7 +74,7 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
 " Do not check puppet syntax, since Ruby is le slow.
-let g:syntastic_disabled_filetypes = ['puppet']
+let g:syntastic_disabled_filetypes = ['puppet', 'scss']
 
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v
