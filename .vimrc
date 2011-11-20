@@ -73,6 +73,9 @@ nmap <leader>l :set list!<CR>
 " and a handy dot for trailing spaces.
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
+" Stop it, hash key.
+inoremap # X<BS>#
+
 " Make working with splits a little easier and stop opening 1 line high splits.
 set winheight=10
 au BufWinEnter * exe "normal! \<c-w>="
