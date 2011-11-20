@@ -73,6 +73,10 @@ nmap <leader>l :set list!<CR>
 " and a handy dot for trailing spaces.
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 
+" Make working with splits a little easier and stop opening 1 line high splits.
+set winheight=10
+au BufWinEnter * exe "normal! \<c-w>="
+
 " Do not check puppet syntax, since Ruby is le slow.
 let g:syntastic_disabled_filetypes = ['puppet', 'scss']
 
