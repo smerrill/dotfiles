@@ -79,3 +79,6 @@
 [submodule ".drush/drush-vagrant"]
 	path = .drush/drush-vagrant
 	url = http://git.drupal.org/project/drush-vagrant.git
+[submodule ".vim/bundle/scala"]
+	path = .vim/bundle/scala
+	url = https://github.com/derekwyatt/vim-scala
