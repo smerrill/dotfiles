@@ -31,9 +31,6 @@
 [submodule ".vim/bundle/phpfolding"]
 	path = .vim/bundle/phpfolding
 	url = https://github.com/vim-scripts/phpfolding.vim
-[submodule ".vim/bundle/scala"]
-	path = .vim/bundle/scala
-	url = https://github.com/ewiplayer/vim-scala.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
