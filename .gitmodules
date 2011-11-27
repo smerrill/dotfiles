@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/vim-haml"]
 	path = .vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml.git
+[submodule ".drush/drush-vagrant"]
+	path = .drush/drush-vagrant
+	url = http://git.drupal.org/project/drush-vagrant.git
