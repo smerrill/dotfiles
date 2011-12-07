@@ -12,7 +12,7 @@ endif
 set guioptions-=T
 
 " Check spelling in a graphical Vim.
-set spell
+" set spell
 
 " Specify the colorscheme again lest it mess up comments.
 colorscheme vilight2
