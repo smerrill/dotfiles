@@ -61,11 +61,6 @@ alias gaste="pbpaste | gist -p"
 # Easy ls -aFl
 alias ll="ls -aFl"
 
-# Wrap 'git' in 'hub' if it is available.
-type -P hub > /dev/null && {
-  alias git=hub
-}
-
 # Do you like a colorful grep? I do!
 alias grep="grep --color=auto"
 
@@ -73,6 +68,11 @@ alias php-ctags='ctags --langmap=php:.engine.inc.module.theme.php.install.test.p
 
 # Always set up $HOME/bin in the front of $PATH.
 export PATH=$HOME/bin:$PATH
+
+# Wrap 'git' in 'hub' if it is available.
+type -P hub > /dev/null && {
+  alias git=hub
+}
 
 # Load other files for bash's use, including some that may not be in git.
 [[ -d ~/.profile.d ]] && for i in ~/.profile.d/*; do
