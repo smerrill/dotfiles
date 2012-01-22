@@ -75,7 +75,7 @@ ${offset 1}${voffset 2}${color0}${membar 4,18}${color}${goto 32}${voffset -2}F: 
 #############
 ${voffset 4}${font Ubuntu:style=Bold:size=8}DATE $stippled_hr${font}
 # ${voffset -10}${alignc 46}${color2}${font Arial Black:size=30}${time %H:%M}${font}${color}
-${voffset -10}${alignc 46}${color2}${font Arial Black:size=30}${time %H:%M}${font}${color}
+${voffset -4}${alignc 46}${color2}${font Arial Black:size=20}${time %I:%M %p}${font}${color}
 ${alignc}${time %d %B %Y}
 ##########
 # - HD - #
