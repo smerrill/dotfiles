@@ -49,5 +49,5 @@ urxvt.scrollBar_right: true
 urxvt.scrollstyle: plain
 
 ! ===[Colorscheme]=================================
-#include ".colors/solarized-light"
+#include ".colors/dwm-colors"
 
