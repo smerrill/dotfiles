@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ~/.xinitrc
 #
@@ -8,4 +8,8 @@
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
+
+xrdb -merge ~/.Xresources
+rxvt &
+
 exec ck-launch-session dbus-launch --exit-with-session startxfce4
