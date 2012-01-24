@@ -66,6 +66,9 @@ alias grep="grep --color=auto"
 
 alias php-ctags='ctags --langmap=php:.engine.inc.module.theme.php.install.test.profile --php-kinds=cdfi --languages=php --recurse --exclude="\.git" --exclude="\.svn" --exclude="\.hg" --exclude="\.bzr" --exclude="\CVS" --totals=yes --tag-relative=yes --regex-PHP="/abstract\s+class\s+([^ ]+)/\1/c/" --regex-PHP="/interface\s+([^ ]+)/\1/c/" --regex-PHP="/(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/"'
 
+# If PEAR is installed, put its bin dir ahead of $PATH.
+type -P pear > /dev/null && export PATH=$(pear config-get bin_dir):$PATH
+
 # Always set up $HOME/bin in the front of $PATH.
 export PATH=$HOME/bin:$PATH
 
