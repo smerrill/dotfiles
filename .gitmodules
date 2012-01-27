@@ -10,9 +10,6 @@
 [submodule ".urxvt/urxvt-perls"]
 	path = .urxvt/urxvt-perls
 	url = https://github.com/smerrill/urxvt-perls.git
-[submodule ".vim/bundle/minibufexpl"]
-	path = .vim/bundle/minibufexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule ".vim/bundle/actionscript"]
 	path = .vim/bundle/actionscript
 	url = https://github.com/smerrill/ActionScript.git
