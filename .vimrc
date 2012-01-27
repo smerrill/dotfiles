@@ -190,6 +190,11 @@ set wrap
 nmap j gj
 nmap k gk
 
+" Stolen from reddit. Make it super easy to open CtrlP (for files or buffers)
+" with leader commands.
+nnoremap <leader>, :CtrlP<Enter>
+nnoremap <leader>. :CtrlPBuffer<Enter>
+
 " The default .vimrc follows.
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
