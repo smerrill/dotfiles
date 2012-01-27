@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/scala"]
 	path = .vim/bundle/scala
 	url = https://github.com/derekwyatt/vim-scala
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
