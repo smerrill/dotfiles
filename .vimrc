@@ -195,6 +195,9 @@ nmap k gk
 nnoremap <leader>, :CtrlP<Enter>
 nnoremap <leader>. :CtrlPBuffer<Enter>
 
+" Don't search VCS directories, CtrlP.
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
+
 " The default .vimrc follows.
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
