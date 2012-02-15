@@ -11,6 +11,12 @@ shopt -s checkwinsize
 # Terminal.app sucks.
 [[ "$TERM_PROGRAM" == "Apple_Terminal" ]] && return
 
+# Force `ls` and `grep` to be colorful under screen/tmux.
+[[ "$TERM" == "screen-256color" ]] && {
+  alias ls="ls --color=always"
+  alias grep="grep --color=always"
+}
+
 # Use vcprompt.
 vcprompt_ps1() {
   [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m%u'
