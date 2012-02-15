@@ -81,6 +81,7 @@ au BufWinEnter * exe "normal! \<c-w>="
 
 " Do not check puppet syntax, since Ruby is le slow.
 let g:syntastic_disabled_filetypes = ['puppet', 'scss']
+let g:syntastic_phpcs_conf=" --standard=DrupalCodingStandard --extensions=php,module,inc,install,test,profile,theme"
 
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v
@@ -197,6 +198,9 @@ nnoremap <leader>. :CtrlPBuffer<Enter>
 
 " Don't search VCS directories, CtrlP.
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
+
+" Don't have CtrlP manage the working directory.
+let g:ctrlp_working_path_mode = 0
 
 " The default .vimrc follows.
 
