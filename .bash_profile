@@ -82,6 +82,9 @@ type -P hub > /dev/null && {
   source $i
 done
 
+# Load up tmuxinator if it's available.
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
