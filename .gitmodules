@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/arduino"]
+	path = .vim/bundle/arduino
+	url = https://github.com/smerrill/vim-arduino.git
