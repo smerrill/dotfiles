@@ -88,6 +88,9 @@ done
 # This loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# CLJR for Clojure.
+[[ -d $HOME/.cljr/bin ]] && export PATH=$HOME/.cljr/bin:$PATH
+
 # If we are in an interactive session, source bashrc.
 [[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
 
