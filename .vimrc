@@ -25,7 +25,7 @@ if !has("gui_running")
   "colorscheme mustang
 else
   " Set color scheme
-  colorscheme vilight2
+  colorscheme Tomorrow-Night-Bright
 endif
 
 " Keep swp files under ~/.vim/swap

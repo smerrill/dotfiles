@@ -15,7 +15,7 @@ set guioptions-=T
 " set spell
 
 " Specify the colorscheme again lest it mess up comments.
-colorscheme vilight2
+colorscheme Tomorrow-Night-Bright
 
 " By default, do not print a header.
 set printoptions=header:0
