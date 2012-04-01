@@ -124,9 +124,6 @@ inoremap jk <esc>
 
 " CoffeeScript customizations
 
-" Lint files as you write them.
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
-
 " Fold by indentation
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
