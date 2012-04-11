@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "INFO: Installing dotfiles."
+echo "This is some cool shit."
 
 # Check that dotfiles repo exists.
 [[ -d $HOME/dotfiles ]] || {
