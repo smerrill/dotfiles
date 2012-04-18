@@ -19,7 +19,11 @@ shopt -s checkwinsize
 
 # Use vcprompt.
 vcprompt_ps1() {
-  [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m%u'
+  [[ `pwd -P` == /Users/smerrill/Documents/Development/perlgem* ]] && {
+  vcprompt -f ' on %b ¿'
+  } || {
+    [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m%u'
+  }
 }
 
 # a functional but sane prompt

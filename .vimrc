@@ -23,6 +23,7 @@ if !has("gui_running")
   " Oh, OS X.
   set t_Co=256
   "colorscheme mustang
+  colorscheme Tomorrow-Night-Bright
 else
   " Set color scheme
   colorscheme Tomorrow-Night-Bright
