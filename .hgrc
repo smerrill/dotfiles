@@ -8,7 +8,7 @@ ignore=/Users/smerrill/.hgignore_global
 [extensions]
 hgext.bookmarks =
 # Run 'easy_install hg-git' if this errors out.
-;hggit = 
+hggit =
 hgext.fetch=
 hgext.convert=
 hgext.mq=
