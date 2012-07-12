@@ -1,5 +1,3 @@
-!Xft.autohint: false
-
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
 urxvt.visualBell: true
@@ -26,18 +24,20 @@ urxvt.scrollBar_right: false
 #include ".colors/dwm-colors"
 
 ! ===[Xft Configuration]===========================
-Xft.dpi: 72
-Xft.antialias: true
+Xft.dpi: 96
+Xft.antialias: false
 Xft.rgba: rgb
+!Xft.autohint: false
 Xft.hinting: true
-Xft.hintstyle: hintfull
+Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! ===[Font Configuration]==========================
-urxvt.font: xft:Monospace:pixelsize=13
-urxvt.boldFont: xft:Monospace:pixelsize=13:style=bold
-urxvt.italicFont: xft:Monospace:pixelsize=13:style=italic
-urxvt.boldItalicFont: xft:Monospace:pixelsize=13:style=italic
+urxvt.font: xft:Monospace:pixelsize=14
+urxvt.boldFont: xft:Monospace:pixelsize=14:style=bold
+urxvt.italicFont: xft:Monospace:pixelsize=14:style=italic
+urxvt.boldItalicFont: xft:Monospace:pixelsize=14:style=italic
+urxvt.letterSpace: -2
 
 ! ===[Extensions]==================================
 urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-tabbedex
