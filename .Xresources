@@ -12,14 +12,17 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
 ! ===[Font Configuration]==========================
-urxvt.font: xft:Mensch:pixelsize=13
-urxvt.boldFont: xft:Mensch:pixelsize=13
-urxvt.italicFont: xft:Mensch:pixelsize=13:style=italic
-urxvt.boldItalicFont: xft:Mensch:pixelsize=13:style=italic
+urxvt.font: xft:Monospace:pixelsize=13
+urxvt.boldFont: xft:Monospace:pixelsize=13:style=bold
+urxvt.italicFont: xft:Monospace:pixelsize=13:style=italic
+urxvt.boldItalicFont: xft:Monospace:pixelsize=13:style=italic
 
 ! ===[Extensions]==================================
 urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-tabbedex
 urxvt.keysym.M-c:        perl:clipboard:copy
+urxvt.keysym.M-t:        \001c
+urxvt.keysym.M-braceright: \001n
+urxvt.keysym.M-braceleft:  \001p
 urxvt.keysym.C-T:        perl:tabbedex:new_tab
 urxvt.keysym.C-Next:     perl:tabbedex:next_tab
 urxvt.keysym.C-Prior:    perl:tabbedex:prev_tab
