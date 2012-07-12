@@ -43,6 +43,11 @@ Darwin)
   [[ -d $brew_prefix/lib/node_modules ]] && export NODE_PATH=$brew_prefix/lib/node_modules
   ;;
 Linux)
+  # Enable bash_completion from brew.
+  if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+
   # Muscle memory is a powerful thing.
   type -P gvim > /dev/null && {
     alias mvim=gvim
