@@ -1,39 +1,29 @@
-Xft.autohint: false
+!Xft.autohint: false
 
 ! ===[Misc Configuration]==========================
 urxvt.geometry: 120x40
 urxvt.visualBell: true
-urxvt.saveLines: 8192
+urxvt.saveLines: 0
 urxvt.fading: 0
 urxvt.cursorBlink: true
 urxvt.loginShell: true
 
 ! ===[Extensions]==================================
-urxvt.perl-ext-common:   default,clipboard,url-select,keyboard-select,tabbedex
+urxvt.perl-ext-common:   default,clipboard,url-select
 urxvt.keysym.M-v:        perl:clipboard:paste
-urxvt.keysym.M-y:        perl:keyboard-select:activate
 
 urxvt.urlButton:         1
 urxvt.matcher.button:    1
 urxvt.underlineURLs:     true
-urxvt.searchable-scrollback: M-f
 urxvt.keysym.M-u:        perl:url-select:select_next
 
-! Native OS X copypasta.
-urxvt.copyCommand:       pbcopy
-urxvt.pasteCommand:      pbpaste
-
-! Tabbed browsing that jives with my Mac OS X-learned muscle memory.
-URxvt.tabbed.autohide:     true
-
 ! ===[UI Config]===================================
-urxvt.scrollBar: true
-urxvt.scrollBar_right: true
-urxvt.scrollstyle: plain
+urxvt.scrollBar: false
+urxvt.scrollBar_right: false
+!urxvt.scrollstyle: plain
 
 ! ===[Colorscheme]=================================
 #include ".colors/dwm-colors"
-
 
 ! ===[Xft Configuration]===========================
 Xft.dpi: 72
@@ -55,12 +45,9 @@ urxvt.keysym.M-c:        perl:clipboard:copy
 urxvt.keysym.M-t:        \001c
 urxvt.keysym.M-braceright: \001n
 urxvt.keysym.M-braceleft:  \001p
-urxvt.keysym.C-T:        perl:tabbedex:new_tab
-urxvt.keysym.C-Next:     perl:tabbedex:next_tab
-urxvt.keysym.C-Prior:    perl:tabbedex:prev_tab
-urxvt.urlLauncher:       /usr/bin/chromium
+urxvt.urlLauncher:       /usr/bin/chromium-browser
 
 ! Back to normal Linux copypasta.
-URxvt.copyCommand:  xsel -ib
-URxvt.pasteCommand: xsel -ob
+urxvt.copyCommand:  xsel -ib
+urxvt.pasteCommand: xsel -ob
 
