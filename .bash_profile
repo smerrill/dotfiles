@@ -12,6 +12,11 @@ Darwin)
     . $brew_prefix/etc/bash_completion
   fi
 
+  # Support for rbenv
+  if [ -f $brew_prefix/bin/rbenv ]; then
+    eval "$(rbenv init -)"
+  fi
+
   # Put homebrew PHP ahead in $PATH a la http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/
   export PATH=$brew_prefix/sbin:$brew_prefix/bin:$PATH
 
@@ -92,9 +97,6 @@ done
 
 # Load up tmuxinator if it's available.
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # CLJR for Clojure.
 [[ -d $HOME/.cljr/bin ]] && export PATH=$HOME/.cljr/bin:$PATH
