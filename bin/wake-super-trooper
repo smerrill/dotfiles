@@ -1,0 +1,8 @@
+#!/bin/bash
+
+type -P wakeonlan > /dev/null || {
+  echo 'ERROR: Could not find wakeonlan.'
+  exit 1
+}
+
+wakeonlan 00:25:22:fa:4e:76
