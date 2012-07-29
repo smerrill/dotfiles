@@ -203,6 +203,11 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
 " Don't have CtrlP manage the working directory.
 let g:ctrlp_working_path_mode = 0
 
+" Editing a LISP with vim? Heresy!
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+let vimclojure#WantNailgun = 1
+
 " The default .vimrc follows.
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,

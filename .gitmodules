@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/arduino"]
 	path = .vim/bundle/arduino
 	url = https://github.com/smerrill/vim-arduino.git
+[submodule ".vim/bundle/VimClojure"]
+	path = .vim/bundle/VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git
