@@ -1,0 +1,7 @@
+#!/bin/bash
+
+[[ $(uname) == "Darwin" ]] && {
+  $(brew --prefix)/bin/reattach-to-user-namespace "$@"
+} || {
+  exec "$@"
+}
