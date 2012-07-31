@@ -1,4 +1,0 @@
-[ -f /etc/arch-release ] && {
-  # Start up ssh-agent upon starting any session.
-  eval `keychain --eval --agents ssh id_rsa id_dsa`
-}
