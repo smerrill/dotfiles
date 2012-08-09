@@ -53,6 +53,9 @@ Linux)
     . /etc/bash_completion
   fi
 
+  # Support for rbenv
+  type -p rbenv > /dev/null && eval "$(rbenv init -)"
+
   # Muscle memory is a powerful thing.
   type -P gvim > /dev/null && {
     alias mvim=gvim
@@ -89,6 +92,9 @@ export PATH=$HOME/bin:$PATH
 type -P hub > /dev/null && {
   alias git=hub
 }
+
+# Use keychain if it's available.
+type -P keychain > /dev/null && eval `keychain --eval --agents ssh id_rsa id_dsa`
 
 # Load other files for bash's use, including some that may not be in git.
 [[ -d ~/.profile.d ]] && for i in ~/.profile.d/*; do

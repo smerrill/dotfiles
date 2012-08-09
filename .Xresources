@@ -21,7 +21,7 @@ urxvt.scrollBar_right: false
 !urxvt.scrollstyle: plain
 
 ! ===[Colorscheme]=================================
-#include ".colors/dwm-colors"
+#include ".colors/jbromley"
 
 ! ===[Xft Configuration]===========================
 Xft.dpi: 96
@@ -33,10 +33,10 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! ===[Font Configuration]==========================
-urxvt.font: xft:Monospace:pixelsize=14
-urxvt.boldFont: xft:Monospace:pixelsize=14:style=bold
-urxvt.italicFont: xft:Monospace:pixelsize=14:style=italic
-urxvt.boldItalicFont: xft:Monospace:pixelsize=14:style=italic
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=14
+urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=14:style=bold
+urxvt.italicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
+urxvt.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
 urxvt.letterSpace: -2
 
 ! ===[Extensions]==================================
