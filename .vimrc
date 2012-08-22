@@ -198,7 +198,7 @@ nnoremap <leader>, :CtrlP<Enter>
 nnoremap <leader>. :CtrlPBuffer<Enter>
 
 " Don't search VCS directories, CtrlP.
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.class,*.jar
 
 " Don't have CtrlP manage the working directory.
 let g:ctrlp_working_path_mode = 0
