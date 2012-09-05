@@ -204,7 +204,9 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.class,*.jar
 let g:ctrlp_working_path_mode = 0
 
 " Editing a LISP with vim? Heresy!
-if has("unix")
+if has("mac")
+  let vimclojure#NailgunClient = "/Users/smerrill/bin/ng"
+elseif has("unix")
   let vimclojure#NailgunClient = "/home/smerrill/bin/linux/ng"
 endif
 let g:vimclojure#HighlightBuiltins = 1
