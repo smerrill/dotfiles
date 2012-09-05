@@ -1,1 +1,1 @@
---type-add=drupal=.theme,.inc,.module,.engine,.test,.install
+--type-set=drupal=.theme,.inc,.module,.engine,.test,.install
