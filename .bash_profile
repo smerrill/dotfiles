@@ -42,7 +42,7 @@ Darwin)
     export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-62308/jars"
   }
 
-  export PYTHONPATH=$brew_prefix/lib/python2.7/site-packages
+  export PYTHONPATH=$brew_prefix/lib/python2.7/site-packages:$PYTHONPATH
 
   # NPM
   [[ -d $brew_prefix/lib/node_modules ]] && export NODE_PATH=$brew_prefix/lib/node_modules
