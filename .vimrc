@@ -84,6 +84,11 @@ au BufWinEnter * exe "normal! \<c-w>="
 let g:syntastic_disabled_filetypes = ['puppet', 'scss', 'scala']
 let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 
+" Map v keys for vimux.
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vv :VimuxRunLastCommand<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+
 " Tame searching and moving, a la Steve Losh.
 nnoremap / /\v
 vnoremap / /\v
