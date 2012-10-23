@@ -85,8 +85,8 @@ alias php-ctags='ctags --langmap=php:.engine.inc.module.theme.php.install.test.p
 # If PEAR is installed, put its bin dir ahead of $PATH.
 type -P pear > /dev/null && export PATH=$(pear config-get bin_dir):$PATH
 
-# Always set up $HOME/bin in the front of $PATH.
-export PATH=$HOME/bin:$PATH
+# Always set up $HOME/bin in $PATH.
+export PATH=$PATH:$HOME/bin
 
 # Wrap 'git' in 'hub' if it is available.
 type -P hub > /dev/null && {
