@@ -3,7 +3,7 @@ username=Steven Merrill <steven.merrill@gmail.com>
 merge = diffmerge
 extdiff = diffmerge
 
-ignore=/Users/smerrill/.hgignore_global
+ignore=~smerrill/.hgignore_global
 
 [extensions]
 hgext.bookmarks =

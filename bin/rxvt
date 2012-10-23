@@ -5,6 +5,8 @@ type -P urxvtc > /dev/null || {
   exit 1
 }
 
+xrdb -merge ~/.Xresources
+
 urxvtc "$@"
 if [ $? -eq 2 ]; then
    urxvtd -q -o -f
