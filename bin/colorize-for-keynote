@@ -1,7 +1,7 @@
 #!/bin/bash
 
 type -P pygmentize > /dev/null || {
-  echo "Please install 'pygmentize' before using this script.";
+  echo "Please install 'pygmentize' before using this script."
   exit 1
 }
 
@@ -11,4 +11,4 @@ type -P pygmentize > /dev/null || {
   FORMAT="bash"
 } 
 
-pbpaste | pygmentize -l $FORMAT -f rtf | pbcopy
+pbpaste | pygmentize -l $FORMAT -f rtf -P 'fontface=Source Code Pro' | pbcopy
