@@ -1,0 +1,14 @@
+#!/bin/bash
+
+type -P pygmentize > /dev/null || {
+  echo "Please install 'pygmentize' before using this script.";
+  exit 1
+}
+
+[[ $1 ]] && {
+  FORMAT="$1"
+} || {
+  FORMAT="bash"
+} 
+
+pbpaste | pygmentize -l $FORMAT -f rtf | pbcopy
