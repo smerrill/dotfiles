@@ -2,6 +2,8 @@
 # BASH configuration file
 #
 
+[[ -f /opt/boxen/env.sh ]] && source /opt/boxen/env.sh
+
 case $(uname) in
 Darwin)
   # Find homebrew prefix if it is available.
