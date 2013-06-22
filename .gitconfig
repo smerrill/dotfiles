@@ -4,7 +4,7 @@
 [color]
 	ui = true
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /opt/boxen/config/git/gitignore
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -13,3 +13,9 @@
 	trustExitCode = true
 [push]
 	default = current
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
