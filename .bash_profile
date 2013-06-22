@@ -2,6 +2,7 @@
 # BASH configuration file
 #
 
+# Boxen setup and nvm setup.
 [[ -f /opt/boxen/env.sh ]] && source /opt/boxen/env.sh
 
 case $(uname) in
@@ -35,7 +36,7 @@ Darwin)
   alias gvim=mvim
 
   # EC2 Tools.
-  export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+  export JAVA_HOME=`/usr/libexec/java_home`
 
   [[ -d "$HOME/.ec2" ]] && {
     export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
@@ -83,6 +84,9 @@ alias ll="ls -aFl"
 alias grep="grep --color=auto"
 
 alias php-ctags='ctags --langmap=php:.engine.inc.module.theme.php.install.test.profile --php-kinds=cdfi --languages=php --recurse --exclude="\.git" --exclude="\.svn" --exclude="\.hg" --exclude="\.bzr" --exclude="\CVS" --totals=yes --tag-relative=yes --regex-PHP="/abstract\s+class\s+([^ ]+)/\1/c/" --regex-PHP="/interface\s+([^ ]+)/\1/c/" --regex-PHP="/(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/"'
+
+# Easy bundle exec'ing.
+alias be="bundle exec"
 
 # If PEAR is installed, put its bin dir ahead of $PATH.
 type -P pear > /dev/null && export PATH=$(pear config-get bin_dir):$PATH
