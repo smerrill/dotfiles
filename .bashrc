@@ -20,14 +20,13 @@ shopt -s checkwinsize
 # Use vcprompt.
 vcprompt_ps1() {
   type -p vcprompt > /dev/null && {
-    [[ `pwd -P` == /Users/smerrill/Documents/Development/perlgem* ]] && {
-    vcprompt -f ' on %b ¿'
-    } || {
-      [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m%u'
-    }
+    [[ `vcprompt -f %n` == 'svn' ]] && vcprompt -f ' at %r %m' || vcprompt -f ' on %b %m%u'
   } || {
     echo ''
   }
+
+  # Also sneak in a bit to flush the last command to bash_history.
+  history -a > /dev/null
 }
 
 # a functional but sane prompt
