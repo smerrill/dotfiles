@@ -150,6 +150,9 @@ au BufNewFile,BufRead *.install set filetype=php
 au BufNewFile,BufRead *.inc set filetype=php
 au BufNewFile,BufRead *.profile set filetype=php
 
+" Correct tab stops for golang.
+autocmd Filetype go setlocal noexpandtab shiftwidth=2 tabstop=2
+
 " Good completion.
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags

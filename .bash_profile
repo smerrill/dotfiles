@@ -21,7 +21,7 @@ Darwin)
   fi
 
   # Put homebrew PHP ahead in $PATH a la http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/
-  export PATH=$brew_prefix/sbin:$brew_prefix/bin:$PATH
+  export PATH=$brew_prefix/sbin:$brew_prefix/bin:$brew_prefix/share/python:$PATH
 
   # Terminal coloring
   export CLICOLOR=1
@@ -46,6 +46,9 @@ Darwin)
   }
 
   export PYTHONPATH=$brew_prefix/lib/python2.7/site-packages:$PYTHONPATH
+
+  # Go
+  export GOPATH=$HOME/Documents/golang
 
   # NPM
   [[ -d $brew_prefix/lib/node_modules ]] && export NODE_PATH=$brew_prefix/lib/node_modules
