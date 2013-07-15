@@ -47,11 +47,11 @@ Darwin)
 
   export PYTHONPATH=$brew_prefix/lib/python2.7/site-packages:$PYTHONPATH
 
-  # Go
-  export GOPATH=$HOME/Documents/golang
-
   # NPM
   [[ -d $brew_prefix/lib/node_modules ]] && export NODE_PATH=$brew_prefix/lib/node_modules
+
+  # Paste to private gist.
+  alias gaste="pbpaste | gist -p"
   ;;
 Linux)
   # Enable bash_completion from brew.
@@ -77,8 +77,8 @@ Linux)
   ;;
 esac
 
-# Paste to private gist.
-alias gaste="pbpaste | gist -p"
+# Go
+export GOPATH=$HOME/Documents/golang
 
 # Easy ls -aFl
 alias ll="ls -aFl"
