@@ -79,6 +79,7 @@ esac
 
 # Go
 export GOPATH=$HOME/Documents/golang
+export PATH=$PATH:$GOPATH/bin
 
 # Easy ls -aFl
 alias ll="ls -aFl"
