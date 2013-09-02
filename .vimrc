@@ -140,7 +140,10 @@ au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 set laststatus=2
 
 " Use an omnifunc if it's available.
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "<C-P>"
+autocmd FileType go let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+autocmd FileType php let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+autocmd FileType clojure let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " @TODO: Move the below to plugins.
 
@@ -215,14 +218,26 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.class,*.jar
 let g:ctrlp_working_path_mode = 0
 
 " Editing a LISP with vim? Heresy!
-if has("mac")
-  let vimclojure#NailgunClient = "/Users/smerrill/bin/ng"
-elseif has("unix")
-  let vimclojure#NailgunClient = "/home/smerrill/bin/linux/ng"
-endif
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-let vimclojure#WantNailgun = 1
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+au BufNewFile,BufReadPost *.clj RainbowParenthesesLoadRound
+au BufNewFile,BufReadPost *.clj RainbowParenthesesActivate
 
 " The default .vimrc follows.
 
