@@ -5,3 +5,5 @@
 .vim/.netrwhist
 .profile.d/local*
 .drush/*.php
+.lein/self-installs
+.lein/repl-history
