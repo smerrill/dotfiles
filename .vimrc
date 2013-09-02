@@ -139,6 +139,9 @@ au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 " Always show the statusline.
 set laststatus=2
 
+" Use an omnifunc if it's available.
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
 " @TODO: Move the below to plugins.
 
 " Set up vim for optimal use with Drupal.
