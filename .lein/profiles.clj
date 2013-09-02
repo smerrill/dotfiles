@@ -1,5 +1,6 @@
-{:user
-  {:plugins
-    [[lein-autoreload "0.1.0"]]
-  }
-}
+{}
+;{:user
+  ;{:plugins
+    ;[[lein-autoreload "0.1.0"]]
+  ;}
+;}

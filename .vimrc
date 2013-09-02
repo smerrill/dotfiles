@@ -238,6 +238,7 @@ let g:rbpt_colorpairs = [
     \ ]
 au BufNewFile,BufReadPost *.clj RainbowParenthesesLoadRound
 au BufNewFile,BufReadPost *.clj RainbowParenthesesActivate
+autocmd BufWritePost *.clj silent Require
 
 " The default .vimrc follows.
 
