@@ -105,7 +105,7 @@
 	url = https://github.com/tpope/vim-fireplace.git
 [submodule ".vim/bundle/vim-classpath"]
 	path = .vim/bundle/vim-classpath
-	url = https://github.com/tpope/vim-classpath.git
+	url = https://github.com/smerrill/vim-classpath.git
 [submodule ".vim/bundle/vim-clojure-static"]
 	path = .vim/bundle/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static.git
