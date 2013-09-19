@@ -25,11 +25,11 @@ urxvt.scrollBar_right: false
 
 ! ===[Xft Configuration]===========================
 Xft.dpi: 96
-Xft.antialias: false
+Xft.antialias: true
 Xft.rgba: rgb
-!Xft.autohint: false
+!Xft.autohint: true
 Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintmedium
 Xft.lcdfilter: lcddefault
 
 ! ===[Font Configuration]==========================
@@ -45,7 +45,7 @@ urxvt.keysym.M-c:        perl:clipboard:copy
 urxvt.keysym.M-t:        \001c
 urxvt.keysym.M-braceright: \001n
 urxvt.keysym.M-braceleft:  \001p
-urxvt.urlLauncher:       /usr/bin/chromium-browser
+urxvt.urlLauncher:       /usr/bin/google-chrome
 
 ! Back to normal Linux copypasta.
 urxvt.copyCommand:  xsel -ib
