@@ -123,5 +123,7 @@ done
 # Keep Packer's cache in one place.
 export PACKER_CACHE_DIR="$HOME/Downloads/packer_cache"
 
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
+type -P phpenv > /dev/null && {
+  export PATH="$HOME/.phpenv/bin:$PATH"
+  eval "$(phpenv init -)"
+}
