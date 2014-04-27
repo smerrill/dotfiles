@@ -10,6 +10,9 @@ Darwin)
   # Find homebrew prefix if it is available.
   brew_prefix=$(brew --prefix)
 
+  # Use (non-Boxen) nvm if possible.
+  [[ -f $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+
   # Enable bash_completion from brew.
   if [ -f $brew_prefix/etc/bash_completion ]; then
     . $brew_prefix/etc/bash_completion
@@ -49,6 +52,9 @@ Darwin)
 
   # NPM
   [[ -d $brew_prefix/lib/node_modules ]] && export NODE_PATH=$brew_prefix/lib/node_modules
+
+  # Support for dvm
+  type -p dvm > /dev/null && eval $(dvm env)
 
   # Paste to private gist.
   alias gaste="pbpaste | gist -p"
@@ -120,10 +126,11 @@ done
 # If we are in an interactive session, source bashrc.
 [[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
 
-# Keep Packer's cache in one place.
-export PACKER_CACHE_DIR="$HOME/Downloads/packer_cache"
-
 type -P phpenv > /dev/null && {
   export PATH="$HOME/.phpenv/bin:$PATH"
   eval "$(phpenv init -)"
 }
+
+# Keep Packer's cache in one place.
+export PACKER_CACHE_DIR="$HOME/Downloads/packer_cache"
+

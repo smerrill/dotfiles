@@ -12,9 +12,45 @@ filetype on
 
 " Autoload with Pathogen.
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle. This is required.
+Bundle 'gmarik/vundle'
+
+" My bundles here:
+Bundle 'smerrill/vcl-vim-plugin'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'smerrill/ActionScript'
+Bundle 'vim-scripts/LargeFile'
+Bundle 'vim-scripts/PHP-correct-Indenting'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+" Revert to 1.7 in my repo.
+Bundle 'smerrill/phpfolding.vim'
+Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'hallison/vim-markdown'
+Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
+Bundle 'smerrill/vagrant-vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'msanders/snipmate.vim'
+Bundle 'millermedeiros/vim-statline'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle 'smerrill/vim-arduino'
+Bundle 'benmills/vimux'
+Bundle 'othree/html5.vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'Blackrush/vim-gocode'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'chriskempson/vim-tomorrow-theme'
 
 " Fix UTF-8 issues on Linuxes.
 scriptencoding utf-8
@@ -238,7 +274,10 @@ let g:rbpt_colorpairs = [
     \ ]
 au BufNewFile,BufReadPost *.clj RainbowParenthesesLoadRound
 au BufNewFile,BufReadPost *.clj RainbowParenthesesActivate
-autocmd BufWritePost *.clj silent Refresh!
+"autocmd BufWritePost *.clj silent Refresh!
+
+" Have CtrlP follow symlinks.
+let g:ctrlp_follow_symlinks = 1
 
 " The default .vimrc follows.
 
