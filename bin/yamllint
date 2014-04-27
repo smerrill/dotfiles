@@ -1,0 +1,8 @@
+#!/bin/bash
+
+[[ $1 ]] || {
+  echo "Usage: $0 [yaml file]"
+  exit 1
+}
+
+curl --data-urlencode yaml'@'$1 -d utf8='%E2%9C%93' -d commit=Go  http://yamllint.com/ --trace-ascii out -G 2>&1 | egrep 'div.*background-color'

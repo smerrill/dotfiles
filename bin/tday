@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Display the timesheet entries for a day in OpenAir-friendly decimal formats.
+
+[[ $1 ]] || {
+  echo "Usage: $0 [days ago]"
+  exit 1
+}
+
+clear
+
+# @TODO: Revisit.
+TIME="$1 days ago"
+t display -s "$TIME" -e "$TIME" all | awk '{ if ($0 ~ /^    Total/) { split($2,a,":"); print $1 "                                        " (a[1] + (a[2]/60) + (a[3]/3600)) } else print $0 }'
