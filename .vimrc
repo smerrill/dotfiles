@@ -37,7 +37,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'smerrill/vagrant-vim'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'msanders/snipmate.vim'
 Bundle 'millermedeiros/vim-statline'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
@@ -51,6 +50,12 @@ Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'rodjek/vim-puppet'
+Bundle 'godlygeek/tabular'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle 'honza/vim-snippets'
 
 " Fix UTF-8 issues on Linuxes.
 scriptencoding utf-8
