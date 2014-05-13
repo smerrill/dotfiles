@@ -127,3 +127,5 @@ type -P phpenv > /dev/null && {
   export PATH="$HOME/.phpenv/bin:$PATH"
   eval "$(phpenv init -)"
 }
+
+true
