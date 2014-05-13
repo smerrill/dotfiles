@@ -134,3 +134,4 @@ type -P phpenv > /dev/null && {
 # Keep Packer's cache in one place.
 export PACKER_CACHE_DIR="$HOME/Downloads/packer_cache"
 
+true
