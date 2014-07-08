@@ -11,4 +11,4 @@ clear
 
 # @TODO: Revisit.
 TIME="$1 days ago"
-t display -s "$TIME" -e "$TIME" all | awk '{ if ($0 ~ /^    Total/) { split($2,a,":"); print $1 "                                        " (a[1] + (a[2]/60) + (a[3]/3600)) } else print $0 }'
+t display -s "$TIME" -e "$TIME" all $2 | awk '{ if ($0 ~ /^    Total/) { split($2,a,":"); print $1 "                                        " (a[1] + (a[2]/60) + (a[3]/3600)) } else print $0 }'
