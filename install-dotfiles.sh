@@ -8,6 +8,10 @@ echo "INFO: Installing dotfiles."
   exit 1
 }
 
+echo "INFO: Updating submodules."
+cd $HOME/dotfiles
+git submodule update --init
+
 # Backup old files.
 [[ -d $HOME/.dotfiles-backup ]] || {
   mkdir $HOME/.dotfiles-backup
@@ -17,7 +21,7 @@ echo "INFO: Installing dotfiles."
 cd $HOME
 
 # Files to exclude.
-excluded=(".gitignore" ".hgignore" ".git" ".dotfiles-backup" ".." "." "install-dotfiles.sh")
+excluded=(".gitignore" ".hgignore" ".git" ".dotfiles-backup" ".." "." "install-dotfiles.sh" "agnoster-smerrill.zsh-theme")
 
 for i in dotfiles/.*; do
   # @TODO: DRY
@@ -31,11 +35,11 @@ for i in dotfiles/.*; do
   # Back up the file if it exists.
   [[ -e $existing_file ]] && {
     echo "INFO: Backing up $existing_file."
-    cp -fr $existing_file .dotfiles-backup/
+    cp -frv $existing_file .dotfiles-backup/
   }
 
   # Make the symlink
-  ln -sf $i $existing_file
+  ln -sfv $i $existing_file
 done
 
 for i in dotfiles/*; do
@@ -50,12 +54,15 @@ for i in dotfiles/*; do
   # Back up the file if it exists.
   [[ -e $existing_file ]] && {
     echo "INFO: Backing up $existing_file."
-    cp -fr $existing_file .dotfiles-backup/
+    cp -frv $existing_file .dotfiles-backup/
   }
 
   # Make the symlink
-  ln -sf $i $existing_file
+  ln -sfv $i $existing_file
 done
+
+echo "INFO: Installing oh-my-zsh theme."
+ln -sfv $HOME/dotfiles/agnoster-smerrill.zsh-theme $HOME/.oh-my-zsh/themes
 
 echo "INFO: Dotfiles installed."
 
