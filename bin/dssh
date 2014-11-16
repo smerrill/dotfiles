@@ -1,3 +1,12 @@
 #!/bin/bash
 
-sudo nsenter -m -u -n -i -p -t $(docker inspect --format="{{.State.Pid}}" $1) -- "${@:2}"
+COMMAND="${@:2}" 
+if [ -z "$COMMAND" ]; then
+  COMMAND="bash"
+fi
+
+if type -p nsenter >/dev/null; then
+  sudo nsenter -m -u -n -i -p -t $(docker inspect --format="{{.State.Pid}}" $1) -- "$COMMAND"
+else
+  docker exec -it $1 $COMMAND
+fi
