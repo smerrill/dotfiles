@@ -55,6 +55,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
+Bundle 'fholgado/minibufexpl.vim'
 
 " Fix UTF-8 issues on Linuxes.
 scriptencoding utf-8
@@ -117,8 +118,11 @@ set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 inoremap # X<BS>#
 
 " Make working with splits a little easier and stop opening 1 line high splits.
-set winheight=10
 au BufWinEnter * exe "normal! \<c-w>="
+
+" Force syntax highlighting when buffers close.
+set hidden
+let g:miniBufExplForceSyntaxEnable = 1
 
 " Do not check puppet syntax, since Ruby is le slow.
 let g:syntastic_disabled_filetypes = ['puppet', 'scss', 'scala']
