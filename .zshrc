@@ -10,6 +10,11 @@ ZSH_THEME="agnoster-smerrill"
 DEFAULT_USER="smerrill"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+if [ -z $UNAME ]; then
+  export UNAME=`uname`
+fi
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -48,15 +53,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler docker gem gitfast git-flow lein phing rbenv redis-cli tmux tmuxinator)
+plugins=(git bundler docker gem gitfast git-flow lein phing rbenv redis-cli ssh-agent tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# @TODO: Fix this per platform.
-export PATH="/usr/local/Cellar/php53/5.3.28/bin:/Users/smerrill/Documents/golang/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/Users/smerrill/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/Cellar/php53/5.3.28/bin:/Users/smerrill/Documents/golang/bin:/usr/local/sbin:/usr/local/share/python:/Users/smerrill/.rbenv/shims:/Users/smerrill/bin:/Users/smerrill/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -71,4 +72,12 @@ export PATH="/usr/local/Cellar/php53/5.3.28/bin:/Users/smerrill/Documents/golang
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export GOPATH="/Users/smerrill/go"
+export GOPATH="$HOME/go"
+export PATH="${GOPATH}/bin:${HOME}/bin:${PATH}"
+if [ $UNAME = "Darwin" ]; then
+  export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+fi
+if [ $UNAME = "Linux" ]; then
+  export VAGRANT_DEFAULT_PROVIDER="libvirt"
+fi
+export DOCKER_HOST="tcp://localhost:2375"
