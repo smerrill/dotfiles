@@ -28,3 +28,30 @@ urxvt.color14 : #34E2E2
 urxvt.color7  : #D3D7CF
 urxvt.color15 : #EEEEEC
 
+urxvt256c.background: #2B2B2B
+urxvt256c.foreground: #DEDEDE
+
+! black
+urxvt256c.color0  : #2E3436
+urxvt256c.color8  : #555753
+! red
+urxvt256c.color1  : #CC0000
+urxvt256c.color9  : #EF2929
+! green
+urxvt256c.color2  : #4E9A06
+urxvt256c.color10 : #8AE234
+! yellow
+urxvt256c.color3  : #C4A000
+urxvt256c.color11 : #FCE94F
+! blue
+urxvt256c.color4  : #3465A4
+urxvt256c.color12 : #729FCF
+! magenta
+urxvt256c.color5  : #75507B
+urxvt256c.color13 : #AD7FA8
+! cyan
+urxvt256c.color6  : #06989A
+urxvt256c.color14 : #34E2E2
+! white
+urxvt256c.color7  : #D3D7CF
+urxvt256c.color15 : #EEEEEC
