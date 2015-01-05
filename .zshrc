@@ -76,8 +76,8 @@ export GOPATH="$HOME/go"
 export PATH="${GOPATH}/bin:${HOME}/bin:${PATH}"
 if [ $UNAME = "Darwin" ]; then
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+  export DOCKER_HOST="tcp://localhost:2375"
 fi
 if [ $UNAME = "Linux" ]; then
   export VAGRANT_DEFAULT_PROVIDER="libvirt"
 fi
-export DOCKER_HOST="tcp://localhost:2375"
