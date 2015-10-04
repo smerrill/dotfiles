@@ -56,6 +56,9 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'chase/vim-ansible-yaml'
+Bundle 'wincent/terminus'
+Bundle 'flazz/vim-colorschemes'
 
 " Fix UTF-8 issues on Linuxes.
 scriptencoding utf-8
@@ -64,11 +67,14 @@ if !has("gui_running")
   " Oh, OS X.
   set t_Co=256
   "colorscheme mustang
-  colorscheme Tomorrow-Night-Bright
+  colorscheme zenburn
 else
   " Set color scheme
-  colorscheme Tomorrow-Night-Bright
+  colorscheme zenburn
 endif
+
+" Only wait for 400 ms before applying a key.
+set timeoutlen=400
 
 " Keep swp files under ~/.vim/swap
 set directory=~/.vim/swap,~/tmp,.
@@ -171,14 +177,6 @@ let Tlist_Use_Horiz_Window=1
 
 " Get out of insert mode without leaving home row.
 inoremap jk <esc>
-
-" CoffeeScript customizations
-
-" Fold by indentation
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
-
-" 2 space indentation
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " Always show the statusline.
 set laststatus=2
