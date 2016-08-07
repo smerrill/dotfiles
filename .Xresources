@@ -63,7 +63,7 @@ urxvt256c.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
 urxvt256c.letterSpace: -2
 
 ! ===[Extensions]==================================
-urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-tabbedex
+urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls
 urxvt.keysym.M-c:        perl:clipboard:copy
 urxvt.keysym.M-t:        \001c
 urxvt.keysym.M-braceright: \001n
@@ -73,7 +73,7 @@ urxvt.urlLauncher:       /usr/bin/google-chrome
 urxvt.copyCommand:  xsel -ib
 urxvt.pasteCommand: xsel -ob
 
-urxvt256c.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-tabbedex
+urxvt256c.perl-lib:          /home/smerrill/.urxvt/urxvt-perls
 urxvt256c.keysym.M-c:        perl:clipboard:copy
 urxvt256c.keysym.M-t:        \001c
 urxvt256c.keysym.M-braceright: \001n

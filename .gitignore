@@ -3,6 +3,7 @@
 *.swp
 *.swo
 .vim/.netrwhist
+.vim/bundle
 .profile.d/local*
 .drush/*.php
 .lein/self-installs
