@@ -198,6 +198,9 @@ au BufNewFile,BufRead *.install set filetype=php
 au BufNewFile,BufRead *.inc set filetype=php
 au BufNewFile,BufRead *.profile set filetype=php
 
+" Fold YAML by indentation.
+au BufNewFile,BufRead *.yaml set foldmethod=indent
+
 " Correct tab stops for golang.
 autocmd Filetype go setlocal noexpandtab shiftwidth=2 tabstop=2
 
