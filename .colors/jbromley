@@ -18,22 +18,22 @@ urxvt.color14: #71bebe
 urxvt.color15: #ffffff
 ! *cursorColor: magenta
 
-urxvt256c.background: #000000
-urxvt256c.foreground: #ffffff
-urxvt256c.color0: #000000
-urxvt256c.color1: #9e1828
-urxvt256c.color2: #aece92
-urxvt256c.color3: #968a38
-urxvt256c.color4: #414171
-urxvt256c.color5: #963c59
-urxvt256c.color6: #418179
-urxvt256c.color7: #bebebe
-urxvt256c.color8: #666666
-urxvt256c.color9: #cf6171
-urxvt256c.color10: #c5f779
-urxvt256c.color11: #fff796
-urxvt256c.color12: #4186be
-urxvt256c.color13: #cf9ebe
-urxvt256c.color14: #71bebe
-urxvt256c.color15: #ffffff
+urxvt256c-ml.background: #000000
+urxvt256c-ml.foreground: #ffffff
+urxvt256c-ml.color0: #000000
+urxvt256c-ml.color1: #9e1828
+urxvt256c-ml.color2: #aece92
+urxvt256c-ml.color3: #968a38
+urxvt256c-ml.color4: #414171
+urxvt256c-ml.color5: #963c59
+urxvt256c-ml.color6: #418179
+urxvt256c-ml.color7: #bebebe
+urxvt256c-ml.color8: #666666
+urxvt256c-ml.color9: #cf6171
+urxvt256c-ml.color10: #c5f779
+urxvt256c-ml.color11: #fff796
+urxvt256c-ml.color12: #4186be
+urxvt256c-ml.color13: #cf9ebe
+urxvt256c-ml.color14: #71bebe
+urxvt256c-ml.color15: #ffffff
 ! *cursorColor: magenta

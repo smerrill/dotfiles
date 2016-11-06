@@ -6,36 +6,36 @@ urxvt.fading: 0
 urxvt.cursorBlink: true
 urxvt.loginShell: true
 
-urxvt256c.geometry: 120x40
-urxvt256c.visualBell: true
-urxvt256c.saveLines: 0
-urxvt256c.fading: 0
-urxvt256c.cursorBlink: true
-urxvt256c.loginShell: true
+urxvt256c-ml.geometry: 120x40
+urxvt256c-ml.visualBell: true
+urxvt256c-ml.saveLines: 0
+urxvt256c-ml.fading: 0
+urxvt256c-ml.cursorBlink: true
+urxvt256c-ml.loginShell: true
 
 ! ===[Extensions]==================================
-urxvt.perl-ext-common:   default,clipboard,url-select
+urxvt.perl-ext-common:   default,clipboard,url-select,font-size
 urxvt.keysym.M-v:        perl:clipboard:paste
 urxvt.urlButton:         1
 urxvt.matcher.button:    1
 urxvt.underlineURLs:     true
 urxvt.keysym.M-u:        perl:url-select:select_next
 
-urxvt256c.perl-ext-common:   default,clipboard,url-select
-urxvt256c.keysym.M-v:        perl:clipboard:paste
-urxvt256c.urlButton:         1
-urxvt256c.matcher.button:    1
-urxvt256c.underlineURLs:     true
-urxvt256c.keysym.M-u:        perl:url-select:select_next
+urxvt256c-ml.perl-ext-common:   default,clipboard,url-select,font-size
+urxvt256c-ml.keysym.M-v:        perl:clipboard:paste
+urxvt256c-ml.urlButton:         1
+urxvt256c-ml.matcher.button:    1
+urxvt256c-ml.underlineURLs:     true
+urxvt256c-ml.keysym.M-u:        perl:url-select:select_next
 
 ! ===[UI Config]===================================
 urxvt.scrollBar: false
 urxvt.scrollBar_right: false
 !urxvt.scrollstyle: plain
 
-urxvt256c.scrollBar: false
-urxvt256c.scrollBar_right: false
-!urxvt256c.scrollstyle: plain
+urxvt256c-ml.scrollBar: false
+urxvt256c-ml.scrollBar_right: false
+!urxvt256c-ml.scrollstyle: plain
 
 ! ===[Colorscheme]=================================
 #include ".colors/jbromley"
@@ -50,36 +50,36 @@ Xft.hintstyle: hintmedium
 Xft.lcdfilter: lcddefault
 
 ! ===[Font Configuration]==========================
-urxvt.font: xft:DejaVu Sans Mono:pixelsize=14
-urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=14:style=bold
-urxvt.italicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
-urxvt.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
+urxvt.font: xft:DejaVu Sans Mono:size=16
+urxvt.boldFont: xft:DejaVu Sans Mono:size=16:style=bold
+urxvt.italicFont: xft:DejaVu Sans Mono:size=16:style=italic
+urxvt.boldItalicFont: xft:DejaVu Sans Mono:size=16:style=italic
 urxvt.letterSpace: -2
 
-urxvt256c.font: xft:DejaVu Sans Mono:pixelsize=14
-urxvt256c.boldFont: xft:DejaVu Sans Mono:pixelsize=14:style=bold
-urxvt256c.italicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
-urxvt256c.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=14:style=italic
-urxvt256c.letterSpace: -2
+urxvt256c-ml.font: xft:DejaVu Sans Mono:size=16
+urxvt256c-ml.boldFont: xft:DejaVu Sans Mono:size=16:style=bold
+urxvt256c-ml.italicFont: xft:DejaVu Sans Mono:size=16:style=italic
+urxvt256c-ml.boldItalicFont: xft:DejaVu Sans Mono:size=16:style=italic
+urxvt256c-ml.letterSpace: -2
 
 ! ===[Extensions]==================================
-urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls
+urxvt.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-font-size
 urxvt.keysym.M-c:        perl:clipboard:copy
-urxvt.keysym.M-t:        \001c
-urxvt.keysym.M-braceright: \001n
-urxvt.keysym.M-braceleft:  \001p
-urxvt.urlLauncher:       /usr/bin/google-chrome
+urxvt.urlLauncher:       /usr/bin/google-chrome-beta
+urxvt.keysym.M-equal:  font-size:increase
+urxvt.keysym.M-minus:  font-size:decrease
+urxvt.keysym.M-0:  font-size:reset
 ! Back to normal Linux copypasta.
 urxvt.copyCommand:  xsel -ib
 urxvt.pasteCommand: xsel -ob
 
-urxvt256c.perl-lib:          /home/smerrill/.urxvt/urxvt-perls
-urxvt256c.keysym.M-c:        perl:clipboard:copy
-urxvt256c.keysym.M-t:        \001c
-urxvt256c.keysym.M-braceright: \001n
-urxvt256c.keysym.M-braceleft:  \001p
-urxvt256c.urlLauncher:       /usr/bin/google-chrome
+urxvt256c-ml.perl-lib:          /home/smerrill/.urxvt/urxvt-perls:/home/smerrill/.urxvt/urxvt-font-size
+urxvt256c-ml.keysym.M-c:        perl:clipboard:copy
+urxvt256c-ml.urlLauncher:       /usr/bin/google-chrome-beta
+urxvt256c-ml.keysym.M-equal:  font-size:increase
+urxvt256c-ml.keysym.M-minus:  font-size:decrease
+urxvt256c-ml.keysym.M-0:  font-size:reset
 ! Back to normal Linux copypasta.
-urxvt256c.copyCommand:  xsel -ib
-urxvt256c.pasteCommand: xsel -ob
+urxvt256c-ml.copyCommand:  xsel -ib
+urxvt256c-ml.pasteCommand: xsel -ob
 

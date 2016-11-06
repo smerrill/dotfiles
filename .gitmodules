@@ -103,3 +103,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".urxvt/urxvt-font-size"]
+	path = .urxvt/urxvt-font-size
+	url = https://github.com/majutsushi/urxvt-font-size.git
