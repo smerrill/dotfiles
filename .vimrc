@@ -73,6 +73,9 @@ else
   colorscheme zenburn
 endif
 
+" Ag is better than Ack!
+let g:ackprg = 'ag --vimgrep --smart-case'
+
 " Only wait for 400 ms before applying a key.
 set timeoutlen=400
 
@@ -261,6 +264,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.class,*.jar
 
 " Don't have CtrlP manage the working directory.
 let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_show_hidden = 1
 
 " Editing a LISP with vim? Heresy!
 let g:rbpt_colorpairs = [

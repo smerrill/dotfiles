@@ -55,6 +55,9 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git bundler docker gem gitfast git-flow lein phing rbenv redis-cli ssh-agent tmux tmuxinator)
 
+# Add extra plugin configuration.
+zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -75,8 +78,7 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH="$HOME/go"
 export PATH="${GOPATH}/bin:${HOME}/bin:${PATH}"
 if [ $UNAME = "Darwin" ]; then
-  export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-  export DOCKER_HOST="tcp://localhost:2375"
+  export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 fi
 if [ $UNAME = "Linux" ]; then
   export VAGRANT_DEFAULT_PROVIDER="libvirt"
