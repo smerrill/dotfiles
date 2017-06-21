@@ -53,7 +53,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler docker gem gitfast git-flow lein phing rbenv redis-cli ssh-agent tmux tmuxinator)
+plugins=(git bundler docker gem gitfast git-flow lein nvm phing rbenv redis-cli ssh-agent tmux tmuxinator)
 
 # Add extra plugin configuration.
 zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
@@ -83,3 +83,5 @@ fi
 if [ $UNAME = "Linux" ]; then
   export VAGRANT_DEFAULT_PROVIDER="libvirt"
 fi
+
+alias ks="kubectl -nkube-system"

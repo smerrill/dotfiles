@@ -178,9 +178,6 @@ let NERDTreeShowHidden=1
 let Tlist_Use_Right_Window=1
 let Tlist_Use_Horiz_Window=1
 
-" Get out of insert mode without leaving home row.
-inoremap jk <esc>
-
 " Always show the statusline.
 set laststatus=2
 

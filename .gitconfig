@@ -4,13 +4,13 @@
 [color]
 	ui = true
 [core]
-	excludesfile = /Users/smerrill/.gitignore_global
+	excludesfile = /Users/stevenmerrill/.gitignore_global
 	editor = /usr/bin/vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = ~/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [push]
 	default = current
@@ -20,3 +20,7 @@ protocol = https
 
 [credential]
 	helper = osxkeychain
+[commit]
+	template = /Users/stevenmerrill/.stCommitMsg
+[alias]
+	up = pull --rebase --autostash
