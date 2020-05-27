@@ -20,7 +20,5 @@ protocol = https
 
 [credential]
 	helper = osxkeychain
-[commit]
-	template = /Users/stevenmerrill/.stCommitMsg
 [alias]
 	up = pull --rebase --autostash
