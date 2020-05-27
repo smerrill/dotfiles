@@ -53,7 +53,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler docker gem gitfast nvm rbenv redis-cli ssh-agent tmux tmuxinator)
+plugins=(git bundler docker gem gitfast nvm rbenv redis-cli ssh-agent tmux tmuxinator kubectl)
 
 # Add extra plugin configuration.
 zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
@@ -75,8 +75,8 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export GOPATH="$HOME/go"
-export PATH="${GOPATH}/bin:${HOME}/bin:${PATH}"
+export GOPATH="${HOME}/go"
+export PATH="${GOPATH}/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}"
 if [ $UNAME = "Darwin" ]; then
   export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 fi
