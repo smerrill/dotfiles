@@ -3,5 +3,9 @@
 [[ -f /usr/bin/pbpaste ]] && {
   /usr/bin/pbpaste
 } || {
-  xsel --clipboard --output
+  [[ ! -z ${WSL_DISTRO_NAME} ]] && {
+    powershell.exe Get-Clipboard
+  } || {
+    xsel --clipboard --output
+  }
 }
