@@ -79,6 +79,7 @@ export GOPATH="${HOME}/go"
 export PATH="${GOPATH}/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}"
 if [ $UNAME = "Darwin" ]; then
   export VAGRANT_DEFAULT_PROVIDER="virtualbox"
+  export PATH="/opt/homebrew/bin:${PATH}"
 fi
 if [ $UNAME = "Linux" ]; then
   export VAGRANT_DEFAULT_PROVIDER="libvirt"
