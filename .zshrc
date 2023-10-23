@@ -87,3 +87,4 @@ if [ $UNAME = "Linux" ]; then
 fi
 
 alias ks="kubectl -nkube-system"
+

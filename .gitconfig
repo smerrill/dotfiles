@@ -6,6 +6,7 @@
 [core]
 	excludesfile = /Users/stevenmerrill/.gitignore_global
 	editor = /usr/bin/vim
+	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -22,3 +23,8 @@ protocol = https
 	helper = osxkeychain
 [alias]
 	up = pull --rebase --autostash
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
