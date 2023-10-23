@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster-smerrill"
+ZSH_THEME="agnoster"
 
 DEFAULT_USER="smerrill"
 
@@ -53,7 +53,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler docker gem gitfast nvm rbenv redis-cli ssh-agent tmux tmuxinator kubectl)
+plugins=(git docker gitfast nvm redis-cli ssh-agent tmux tmuxinator kubectl bun)
 
 # Add extra plugin configuration.
 zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
@@ -76,7 +76,8 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export GOPATH="${HOME}/go"
-export PATH="${GOPATH}/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}"
+export BUN_INSTALL="${HOME}/.bun"
+export PATH="${BUN_INSTALL}/bin:${GOPATH}/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}"
 if [ $UNAME = "Darwin" ]; then
   export VAGRANT_DEFAULT_PROVIDER="virtualbox"
   export PATH="/opt/homebrew/bin:${PATH}"

@@ -53,7 +53,6 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'godlygeek/tabular'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'chase/vim-ansible-yaml'
