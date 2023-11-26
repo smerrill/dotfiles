@@ -50,16 +50,6 @@ fi
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git docker gitfast nvm redis-cli ssh-agent tmux tmuxinator kubectl bun)
-
-# Add extra plugin configuration.
-zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # # Preferred editor for local and remote sessions
@@ -76,8 +66,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export GOPATH="${HOME}/go"
-export BUN_INSTALL="${HOME}/.bun"
-export PATH="${BUN_INSTALL}/bin:${GOPATH}/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}"
+export PATH="${GOPATH}/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}"
 if [ $UNAME = "Darwin" ]; then
   export VAGRANT_DEFAULT_PROVIDER="virtualbox"
   export PATH="/opt/homebrew/bin:${PATH}"
@@ -87,6 +76,9 @@ if [ $UNAME = "Linux" ]; then
 fi
 
 alias ks="kubectl -nkube-system"
+
+# Extra Python path support
+[ -d "/opt/homebrew/opt/python/libexec/bin" ] && export PATH="/opt/homebrew/opt/python/libexec/bin/:${PATH}"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -98,3 +90,14 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git docker gitfast nvm redis-cli ssh-agent tmux)
+
+# Add extra plugin configuration.
+zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
+
+source $ZSH/oh-my-zsh.sh
+

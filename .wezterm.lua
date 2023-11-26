@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -17,14 +18,37 @@ config.color_scheme = 'Dracula+'
 config.font = wezterm.font {
   family = 'Monaspace Neon',
   weight = 'Medium',
-  stretch = 'Condensed',
+  --stretch = 'ExtraCondensed',
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
-config.font_size = 10.5
-config.default_domain = 'WSL:Ubuntu-20.04'
+
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.default_domain = 'WSL:Ubuntu-20.04'
+  config.font_size = 10.5
+else
+  config.font_size = 14.0
+end
 
 -- Behavioral config
-config.hide_tab_bar_if_only_one_tab = true
+config.enable_tab_bar = false
+
+-- Allow sending CMD-t/{/} through to tmux
+local sendNextTab = act.SendKey { key = '}', mods = 'META'}
+local sendPrevTab = act.SendKey { key = '{', mods = 'META'}
+
+config.keys = {
+  { key = 't', mods = 'CMD', action = act.SendKey { key = 't', mods = 'META' }, },
+  { key = ']', mods = 'SUPER', action = sendNextTab },
+  { key = ']', mods = 'SUPER|SHIFT', action = sendNextTab },
+  { key = '}', mods = 'SUPER', action = sendNextTab },  -- Bug in WezTerm
+  { key = '}', mods = 'SUPER|SHIFT', action = sendNextTab },  -- Bug in WezTerm
+  { key = '[', mods = 'SUPER', action = sendPrevTab },
+  { key = '[', mods = 'SUPER|SHIFT', action = sendPrevTab },
+  { key = '{', mods = 'SUPER', action = sendPrevTab },  -- Bug in WezTerm
+  { key = '{', mods = 'SUPER|SHIFT', action = sendPrevTab },  -- Bug in WezTerm
+}
+
+config.window_close_confirmation = 'NeverPrompt'
 
 -- and finally, return the configuration to wezterm
 return config
