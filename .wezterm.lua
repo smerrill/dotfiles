@@ -2,6 +2,12 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
+--local mux = wezterm.mux
+--wezterm.on("gui-startup", function(cmd)
+  --local tab, pane, window = mux.spawn_window(cmd or {})
+  --window:gui_window():maximize()
+--end)
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -24,6 +30,8 @@ config.font = wezterm.font {
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.default_domain = 'WSL:Ubuntu-20.04'
+  config.font_size = 10.5
+elseif wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
   config.font_size = 10.5
 else
   config.font_size = 14.0
@@ -49,6 +57,12 @@ config.keys = {
 }
 
 config.window_close_confirmation = 'NeverPrompt'
+
+-- Debian Sid issues, heh
+config.enable_wayland = true
+--config.window_decorations = "RESIZE"
+--config.window_decorations = "TITLE | RESIZE"
+--config.dpi = 144
 
 -- and finally, return the configuration to wezterm
 return config
