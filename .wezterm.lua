@@ -61,8 +61,8 @@ config.window_close_confirmation = 'NeverPrompt'
 -- Debian Sid issues, heh
 config.enable_wayland = true
 --config.window_decorations = "RESIZE"
---config.window_decorations = "TITLE | RESIZE"
---config.dpi = 144
+config.window_decorations = "TITLE | RESIZE"
+config.dpi = 72
 
 -- and finally, return the configuration to wezterm
 return config

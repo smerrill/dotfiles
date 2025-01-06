@@ -99,5 +99,8 @@ plugins=(git docker gitfast nvm redis-cli ssh-agent tmux)
 # Add extra plugin configuration.
 zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_4096
 
+# Try to run all Electron apps in Wayland!
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
 source $ZSH/oh-my-zsh.sh
 
